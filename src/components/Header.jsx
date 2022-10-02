@@ -17,12 +17,28 @@ export default function Header() {
 
     function changeTheme() {
         let body = document.getElementsByTagName("BODY")[0];
+        let hr = document.getElementsByTagName("HR")[0];
+        let eventPeriod = document.getElementsByClassName('eventPeriod');
+        let eventName = document.getElementsByClassName('eventName')
+        let timedot = document.getElementsByClassName('timedot')
         if (theme === 'dark') {
             setTheme('white')
             body.style.backgroundColor = "white";
+            hr.style.backgroundColor = "black";
+            for (let i in Constants.timeline_events) {
+                eventPeriod[i].style.color = 'black'
+                eventName[i].style.color = 'black'
+                // timedot[i].style.backgroundColor = 'white'
+            }
         } else if (theme === 'white') {
             setTheme('dark')
             body.style.backgroundColor = "black";
+            hr.style.backgroundColor = "white";
+            for (let i in Constants.timeline_events) {
+                eventPeriod[i].style.color = 'white'
+                eventName[i].style.color = 'white'
+                // timedot[i].style.backgroundColor = 'black'
+            }     
         }
     }
 

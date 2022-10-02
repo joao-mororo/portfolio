@@ -3,3 +3,21 @@ export let links = {
     instagram: 'https://www.instagram.com/boa_mororo/',
     github: 'https://github.com/joao-mororo'
 }
+
+export let timeline_events = [
+    {
+        name: 'technical course',
+        period: '2018 - 2020',
+        description: 'During high school, I studied at a technical school, where I started my learnings about programming logic in a course of systems development technician.'
+    },
+    {
+        name: 'college',
+        period: '2020 - 2022',
+        description: 'After high school, started a high course of analysis and systems development.'
+    },
+    {
+        name: 'Internship',
+        period: '2021 - 2022',
+        description: 'In parallel with college, I worked on an automation team, where I focused my time and effort on software development and managed some projects.'
+    },
+]
