@@ -1,4 +1,4 @@
-export let links = {
+export const LINKS = {
     linkedin: 'https://www.linkedin.com/in/jo%C3%A3o-vitor-moror%C3%B3-9639b321b',
     instagram: 'https://www.instagram.com/boa_mororo/',
     github: 'https://github.com/joao-mororo'
@@ -21,3 +21,14 @@ export let timeline_events = [
         description: 'In parallel with college, I worked on an automation team, where I focused my time and effort on software development and managed some projects.'
     },
 ]
+
+export const I18N_STORAGE_KEY = 'i18nextLng'
+
+export const DEFAULT_LANGUAGE = 'en'
+
+export const DEFAULT_COLORS = {
+    blue: '#0d6efd',
+    black: 'black'
+}
+
+export const ICONS_SIZE = 30
