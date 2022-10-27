@@ -3,7 +3,9 @@
     width: 100%;
     justify-content: space-evenly;
     align-items: flex-start;
-    padding-top: 10%;
+    /* height: 667px; */
+    /* padding-top: 7%; */
+    margin: 170px 0;
 }
 
 .description {
@@ -33,4 +35,10 @@ span {
 span > p {
     margin: 0;
     margin-left: 10px;
+}
+
+@media (max-width: 1224px) {
+    .descriptionTitle {
+        font-size: 45px;
+    }
 }

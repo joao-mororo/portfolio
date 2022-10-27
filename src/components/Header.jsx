@@ -9,7 +9,8 @@ import {
     Linkedin,
     Instagram,
     List,
-    X
+    X,
+    Download
 } from 'react-bootstrap-icons'
 import { Button } from "react-bootstrap";
 import { useMediaQuery } from 'react-responsive'
@@ -17,6 +18,7 @@ import Modal from 'react-modal';
 
 export default function Header() {
     const [modalIsOpen, setIsOpen] = React.useState(false);
+    Modal.setAppElement('#root')
 
     const isDesktopOrLaptop = useMediaQuery({ query: '(min-width: 1224px)' })
     const isTabletOrMobile = useMediaQuery({ query: '(max-width: 1224px)' })
@@ -61,12 +63,6 @@ export default function Header() {
     return (
         <>
             <div id="header">
-                <div id="nav">
-                    <Button as="a" className="navButton" variant="outline-primary">{i18n.t('header.about_me')}</Button>
-                    <Button as="a" className="navButton" variant="outline-primary">{i18n.t('header.timeline')}</Button>
-                    <Button as="a" className="navButton" variant="outline-primary">{i18n.t('header.projects')}</Button>
-                </div>
-
                 {isDesktopOrLaptop &&
                     <>
                         <div id="buttons">
@@ -83,6 +79,11 @@ export default function Header() {
                     </>
                 }
 
+                <div id="rightButtons">
+                    {isDesktopOrLaptop && <><Button variant="outline-primary">Download CV</Button>{' '}</>}
+                    <Button variant="primary">Say Hello!</Button>{' '}
+                </div>
+
                 <Modal
                     isOpen={modalIsOpen}
                     onRequestClose={closeModal}
@@ -90,9 +91,11 @@ export default function Header() {
                 >
                     <X id="closeButton" size={30} onClick={closeModal} />
                     <div id="modalItems">
-                        <a className="modalItem" href={Constants.LINKS.github} target="_blank" rel="noreferrer"> <Github size={25} /> Github</a>
-                        <a className="modalItem" href={Constants.LINKS.linkedin} target="_blank" rel="noreferrer"> <Linkedin size={25} /> LinkedIn</a>
-                        <a className="modalItem" href={Constants.LINKS.instagram} target="_blank" rel="noreferrer"> <Instagram size={25} /> Instagram</a>
+                        <a className="modalItem" href={Constants.LINKS.github} onClick={closeModal} target="_blank" rel="noreferrer"> <Github size={25} /> Github</a>
+                        <a className="modalItem" href={Constants.LINKS.linkedin} onClick={closeModal} target="_blank" rel="noreferrer"> <Linkedin size={25} /> LinkedIn</a>
+                        <a className="modalItem" href={Constants.LINKS.instagram} onClick={closeModal} target="_blank" rel="noreferrer"> <Instagram size={25} /> Instagram</a>
+                        <a className="modalItem" type="button" onClick={changeLenguage}><Translate size={25} /> Translate</a>
+                        <a className="modalItem" href="./curriculo.pdf" download="CV - João Vitor Pereira Mororó" onClick={closeModal}> <Download size={25} /> Download CV</a>
                     </div>
 
                 </Modal>

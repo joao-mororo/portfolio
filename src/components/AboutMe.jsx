@@ -11,12 +11,13 @@ export default function AboutMe(props) {
     const [downloaded, setDownloaded] = React.useState(false)
 
     // adjust height
-    React.useEffect(() => {
-        let screenHeight = window.screen.height
-        let aboutMe = document.getElementById('aboutMe')
-        aboutMe.style.height = `${screenHeight - 60}px`
-        console.log(screenHeight)
-    }, [])
+    // React.useEffect(() => {
+    //     let screenHeight = window.screen.height
+    //     let aboutMe = document.getElementById('aboutMe')
+    //     let skills = document.getElementById('skills')
+    //     aboutMe.style.height = `${screenHeight - skills.style.height}px`
+    //     console.log(skills.style.height)
+    // }, [])
 
     function downloadCheck() {
         setDownloaded(true)
