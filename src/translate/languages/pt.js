@@ -2,9 +2,9 @@ const messages = {
     pt: {
         translations: {
             header: {
-                about_me: 'Sobre mim',
-                timeline: 'Linha do tempo',
-                projects: 'Projetos'
+                say_hello: 'Diga Olá!',
+                downloadCV: 'Baixar CV',
+                CVDownloaded: 'Baixado'
             },
             about_me: {
                 title: "Olá, eu sou João Vitor :)",

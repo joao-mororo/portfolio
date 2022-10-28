@@ -80,8 +80,8 @@ export default function Header() {
                 }
 
                 <div id="rightButtons">
-                    {isDesktopOrLaptop && <><Button variant="outline-primary">Download CV</Button>{' '}</>}
-                    <Button variant="primary">Say Hello!</Button>{' '}
+                    {isDesktopOrLaptop && <><Button variant="outline-primary">{i18n.t('header.downloadCV')}</Button></>}
+                    <Button variant="primary">{i18n.t('header.say_hello')}</Button>
                 </div>
 
                 <Modal
@@ -95,7 +95,7 @@ export default function Header() {
                         <a className="modalItem" href={Constants.LINKS.linkedin} onClick={closeModal} target="_blank" rel="noreferrer"> <Linkedin size={25} /> LinkedIn</a>
                         <a className="modalItem" href={Constants.LINKS.instagram} onClick={closeModal} target="_blank" rel="noreferrer"> <Instagram size={25} /> Instagram</a>
                         <a className="modalItem" type="button" onClick={changeLenguage}><Translate size={25} /> Translate</a>
-                        <a className="modalItem" href="./curriculo.pdf" download="CV - João Vitor Pereira Mororó" onClick={closeModal}> <Download size={25} /> Download CV</a>
+                        <a className="modalItem" href="./curriculo.pdf" download="CV - João Vitor Pereira Mororó" onClick={closeModal}> <Download size={25} /> {i18n.t('header.downloadCV')}</a>
                     </div>
 
                 </Modal>

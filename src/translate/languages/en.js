@@ -2,9 +2,9 @@ const messages = {
     en: {
         translations: {
             header: {
-                about_me: 'About me',
-                timeline: 'Timeline',
-                projects: 'Projects'
+                say_hello: 'Say Hello!',
+                downloadCV: 'Download CV',
+                CVDownloaded: 'Downloaded'
             },
             about_me: {
                 title: "Hi, I'm João Vitor :)",

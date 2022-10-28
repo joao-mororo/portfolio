@@ -39,6 +39,7 @@ span > p {
 
 @media (max-width: 1224px) {
     .descriptionTitle {
-        font-size: 45px;
+        /* font-size: 45px; */
+        font-size: 225%;
     }
 }
