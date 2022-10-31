@@ -28,7 +28,8 @@ export const DEFAULT_LANGUAGE = 'en'
 
 export const DEFAULT_COLORS = {
     blue: '#0d6efd',
-    black: 'black'
+    black: 'black',
+    input: '#2b2b2b'
 }
 
 export const ICONS_SIZE = 30

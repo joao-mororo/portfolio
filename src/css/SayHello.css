@@ -1,0 +1,71 @@
+#sayHello {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form {
+    width: 50%;
+}
+
+
+#name,
+#email {
+    width: 49%;
+    margin-bottom: 1%;
+}
+
+#email {
+    margin-left: 2%;
+}
+
+#subject {
+    width: 100%;
+    margin: 1% 0;
+}
+#message {
+    width: 100%;
+    margin: 1% 0;
+    min-height: 100px;
+}
+
+.formInput {
+    background-color: #2b2b2b;
+    border: solid transparent;
+    height: 50px;
+    color: white;
+}
+
+section {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+#submit {
+    margin-left: 2%;
+}
+
+@media (max-width: 1224px) {
+    form {
+        width: 80%;
+    }
+    #name,
+    #email {
+        width: 100%;
+        margin-bottom: 2%;
+    }
+    #email {
+        margin-left: 0;
+        margin-bottom: 2%;
+    }
+    #subject {
+        margin: 0;
+        margin-bottom: 2%;
+    }
+    #message {
+        margin: 0;
+        margin-bottom: 2%;
+        min-height: 150px;
+    }
+}
