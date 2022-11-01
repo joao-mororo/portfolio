@@ -11,6 +11,13 @@ const messages = {
                 body: "Como desenvolvedor Front-End, eu crio aplicações bonitas e funcionais para web.",
                 downloadCV: 'Baixar CV',
                 CVDownloaded: 'Baixado'
+            },
+            say_hello: {
+                send: 'Enviar',
+                clear: 'Limpar',
+                name: 'Nome',
+                subject: 'Assunto',
+                message: 'Mensagem'
             }
         }
     }

@@ -33,3 +33,9 @@ export const DEFAULT_COLORS = {
 }
 
 export const ICONS_SIZE = 30
+
+export const EMAILJS = {
+    serviceID: 'service_keh0pod',
+    templateID: 'template_yzfj163',
+    publicKey: 'sc96cxHOnd8-UMLxH'
+}

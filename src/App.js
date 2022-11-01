@@ -15,8 +15,8 @@ function App() {
   return (
     <>
       <Header />
-      {/* <AboutMe /> */}
-      {/* <Skills /> */}
+      <AboutMe />
+      <Skills />
       <SayHello />
       {/* <Timeline events={Constants.timeline_events} /> */}
     </>

@@ -22,7 +22,6 @@ export default function Header() {
 
     const isDesktopOrLaptop = useMediaQuery({ query: '(min-width: 1224px)' })
     const isTabletOrMobile = useMediaQuery({ query: '(max-width: 1224px)' })
-    const isPortrait = useMediaQuery({ query: '(orientation: portrait)' })
 
     const modalStyle = {
         overlay: {
@@ -80,8 +79,8 @@ export default function Header() {
                 }
 
                 <div id="rightButtons">
-                    {isDesktopOrLaptop && <><Button variant="outline-primary">{i18n.t('header.downloadCV')}</Button></>}
-                    <Button variant="primary">{i18n.t('header.say_hello')}</Button>
+                    {isDesktopOrLaptop && <><Button as="a" href="./curriculo.pdf" download="CV - João Vitor Pereira Mororó" variant="outline-primary">{i18n.t('header.downloadCV')}</Button></>}
+                    <Button as="a" href="#sayHello" variant="primary">{i18n.t('header.say_hello')}</Button>
                 </div>
 
                 <Modal
