@@ -35,6 +35,16 @@ form {
     border: solid transparent;
     height: 50px;
     color: white;
+    caret-color: #0d6efd;
+    transition: .2s ease-in-out;
+}
+.formInput:focus {
+    outline: none;
+    border-bottom: solid  1px #0d6efd;
+    
+}
+.formInput:focus::placeholder {
+    color: transparent;
 }
 
 section {

@@ -7,8 +7,9 @@ const messages = {
                 CVDownloaded: 'Downloaded'
             },
             about_me: {
-                title: "Hi, I'm João Vitor :)",
-                body: "As Front-End Developer, I create beatiful and functional applications for web.",
+                hi: 'Hi,',
+                im: "I'm João Vitor,",
+                developer: 'web developer',
                 downloadCV: 'Download CV',
                 CVDownloaded: 'Downloaded'
             },
