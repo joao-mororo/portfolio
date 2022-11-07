@@ -10,7 +10,8 @@ import {
     Instagram,
     List,
     X,
-    Download
+    Download,
+    Code
 } from 'react-bootstrap-icons'
 import { Button } from "react-bootstrap";
 import { useMediaQuery } from 'react-responsive'
@@ -25,17 +26,16 @@ export default function Header() {
 
     const modalStyle = {
         overlay: {
-            backgroundColor: 'rgb(20, 20, 20, 0.75)'
+            backgroundColor: 'rgb(29, 29, 29, 0.75)'
         },
         content: {
-            backgroundColor: 'rgb(20, 20, 20)',
+            backgroundColor: 'rgb(29, 29, 29)',
             border: 'solid 1px #0d6efd',
-            top: '50%',
-            left: '50%',
-            right: 'auto',
-            bottom: 'auto',
-            marginRight: '-50%',
-            transform: 'translate(-50%, -50%)',
+            display: 'flex',
+            justifyContent: 'space-evenly',
+            alignItems: 'center',
+            flexDirection: 'column',
+            padding: '0'
         }
     }
 
@@ -89,12 +89,16 @@ export default function Header() {
                     style={modalStyle}
                 >
                     <X id="closeButton" size={30} onClick={closeModal} />
+                    <div id="modalHeader">
+                        <h1><Code color="#0d6efd" size={80} /></h1>
+                        <span>Web Developer</span>
+                    </div>
                     <div id="modalItems">
-                        <a className="modalItem" href={Constants.LINKS.github} onClick={closeModal} target="_blank" rel="noreferrer"> <Github size={25} /> Github</a>
-                        <a className="modalItem" href={Constants.LINKS.linkedin} onClick={closeModal} target="_blank" rel="noreferrer"> <Linkedin size={25} /> LinkedIn</a>
-                        <a className="modalItem" href={Constants.LINKS.instagram} onClick={closeModal} target="_blank" rel="noreferrer"> <Instagram size={25} /> Instagram</a>
-                        <a className="modalItem" type="button" onClick={changeLenguage}><Translate size={25} /> Translate</a>
-                        <a className="modalItem" href="./curriculo.pdf" download="CV - João Vitor Pereira Mororó" onClick={closeModal}> <Download size={25} /> {i18n.t('header.downloadCV')}</a>
+                        <a className="modalItem" href={Constants.LINKS.github} onClick={closeModal} target="_blank" rel="noreferrer">Github</a>
+                        <a className="modalItem" href={Constants.LINKS.linkedin} onClick={closeModal} target="_blank" rel="noreferrer">LinkedIn</a>
+                        <a className="modalItem" href={Constants.LINKS.instagram} onClick={closeModal} target="_blank" rel="noreferrer">Instagram</a>
+                        <a className="modalItem" type="button" onClick={changeLenguage}>Translate</a>
+                        <a className="modalItem" href="./curriculo.pdf" download="CV - João Vitor Pereira Mororó" onClick={closeModal}>{i18n.t('header.downloadCV')}</a>
                     </div>
 
                 </Modal>

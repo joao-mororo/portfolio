@@ -3,8 +3,8 @@ import { Download, Check } from "react-bootstrap-icons";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Button } from 'react-bootstrap'
 import { i18n } from "../translate/i18n";
-import '../css/AboutMe.css'
-import '../'
+import '../css/Home.css'
+import '..'
 
 export default function AboutMe(props) {
     const [downloaded, setDownloaded] = React.useState(false)
@@ -26,7 +26,7 @@ export default function AboutMe(props) {
     }
 
     return (
-        <div id="aboutMe">
+        <div id="Home">
             {/* <h1 className="descriptionTitle">{i18n.t('about_me.title')}</h1>
                 <p className="descriptionBody">{i18n.t('about_me.body')}</p> */}
             <h1>
