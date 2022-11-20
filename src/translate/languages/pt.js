@@ -18,7 +18,10 @@ const messages = {
                 clear: 'Limpar',
                 name: 'Nome',
                 subject: 'Assunto',
-                message: 'Mensagem'
+                message: 'Mensagem',
+                toast_success: 'Email enviado',
+                toast_error: 'Email não enviado',
+                empty: 'Preencha todos os campos'
             }
         }
     }

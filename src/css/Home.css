@@ -18,7 +18,7 @@ h1 > p {
     font-size: 200%;
 }
 
-div > p {
+#Home > p {
     color: rgb(13, 110, 253);
     letter-spacing: 4px;
 }

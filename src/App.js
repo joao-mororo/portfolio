@@ -1,7 +1,8 @@
 import React from "react";
 import { ArrowUp } from "react-bootstrap-icons";
 import Header from "./components/Header";
-import AboutMe from "./components/Home";
+import Home from "./components/Home";
+import About from "./components/About";
 import Skills from "./components/Skills";
 import SayHello from "./components/SayHello";
 import Timeline from "./components/Timelime";
@@ -34,7 +35,8 @@ function App() {
     <>
       <button id="toTopButton" onClick={toTop} title="Go to top"><ArrowUp size={20} /></button>
       <Header />
-      <AboutMe />
+      <Home />
+      <About />
       <Skills />
       <SayHello />
       {/* <Timeline events={Constants.timeline_events} /> */}

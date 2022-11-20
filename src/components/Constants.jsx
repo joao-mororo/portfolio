@@ -39,3 +39,14 @@ export const EMAILJS = {
     templateID: 'template_yzfj163',
     publicKey: 'sc96cxHOnd8-UMLxH'
 }
+
+export const DEFAULT_TOAST_CONFIG = {
+    position: "bottom-right",
+    autoClose: 5000,
+    hideProgressBar: false,
+    closeOnClick: true,
+    pauseOnHover: false,
+    draggable: true,
+    progress: undefined,
+    theme: "dark"
+}
