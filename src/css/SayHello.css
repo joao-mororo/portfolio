@@ -79,4 +79,7 @@ section {
         margin-bottom: 2%;
         min-height: 150px;
     }
+    #sayHello {
+        margin: 100px 0;
+    }
 }

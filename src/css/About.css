@@ -14,9 +14,10 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    margin: 0 30px;
 }
 
-#description h1 {
+#description header {
     font-size: 4rem;
     font-family: 'Roboto', sans-serif;
 }
@@ -32,7 +33,33 @@
     width: auto;
 }
 
-p {
+#description p {
     color: #fff;
     margin: 0;
+    padding: 10px 0;
+    text-align: center;
+}
+
+@media (max-width: 1224px) {
+    #About {
+        flex-direction: column;
+    }
+
+    #description {
+        width: 100%;
+    }
+
+    #description header {
+        font-size: 4.5rem;
+    }
+
+    #description p {
+        text-align: start;
+        font-size: 1.5rem;
+    }
+
+    #avatar,
+    #avatar > img {
+        width: 100%;
+    }
 }

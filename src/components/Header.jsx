@@ -16,8 +16,11 @@ import {
 import { Button } from "react-bootstrap";
 import { useMediaQuery } from 'react-responsive'
 import Modal from 'react-modal';
+import Menu from "./Menu";
 
 export default function Header() {
+    const [menu, setMenu] = React.useState(false)
+    const menuIsOpen = () => setMenu(!menu)
     const [modalIsOpen, setIsOpen] = React.useState(false);
     Modal.setAppElement('#root')
 
@@ -62,6 +65,7 @@ export default function Header() {
     return (
         <>
             <div id="header">
+                {menu && <Menu />}
                 {isDesktopOrLaptop &&
                     <>
                         <div id="buttons">
