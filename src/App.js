@@ -1,6 +1,5 @@
 import React from "react";
 import { ArrowUp } from "react-bootstrap-icons";
-import Header from "./components/Header";
 import Home from "./components/Home";
 import About from "./components/About";
 import Skills from "./components/Skills";
@@ -34,7 +33,6 @@ function App() {
   return (
     <>
       <button id="toTopButton" onClick={toTop} title="Go to top"><ArrowUp size={20} /></button>
-      <Header />
       <Home />
       <About />
       <Skills />

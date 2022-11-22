@@ -1,6 +1,49 @@
+#openMenu,
+#closeMenu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 10px;
+}
+
 #Menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     position: fixed;
     width: 100vw;
     height: 100vh;
-    background-color: red;
+    background-color: #1d1d1d;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+#menuHeader {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: black;
+    color: #0d6efd;
+}
+
+#menuOptions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#menuOptions a {
+    text-decoration: none;
+    color: #fff;
+    padding: 10px 0;
+}
+
+#menuSocial {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 70px 0;
+}
+#menuSocial a {
+    color: #fff;
+    margin: 0 10px;
 }
