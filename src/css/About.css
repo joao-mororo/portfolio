@@ -50,12 +50,13 @@
     }
 
     #description header {
-        font-size: 4.5rem;
+        /* font-size: 4.5rem; */
+        font-size: 3rem;
     }
 
     #description p {
         text-align: start;
-        font-size: 1.5rem;
+        font-size: 1.3rem;
     }
 
     #avatar,

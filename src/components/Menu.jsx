@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import * as Constants from './Constants'
 import { 
     X,
@@ -29,14 +29,34 @@ export default function Menu() {
         window.location.reload(false)
     }
 
+    // remove body scroll when menu is open
+    useEffect(() => {
+        const scroll = document.getElementsByTagName('body')[0]
+        if (menu) {
+            scroll.style.overflowY = 'hidden'
+        } else {
+            scroll.style.overflowY = 'scroll'
+        }
+    }, [menu])
+
+    // remove Say Hello button when menu is open
+    useEffect(() => {
+        const button = document.getElementById('sayHello-button')
+        if (menu && button) {
+            button.style.display = 'none'
+        } else if (!menu && button) {
+            button.style.display = 'block'
+        }
+    }, [menu])
+
     return (
         <>
             {menu 
                 ?
                 <div id="Menu">
-                    <a type="button" id="closeMenu" onClick={menuIsOpen}>
+                    <button id="closeMenu" onClick={menuIsOpen}>
                         <X size={iconSize} color={iconColor} />
-                    </a>
+                    </button>
 
                     <div id="menuHeader">
                         <Code size={70} />
@@ -54,9 +74,9 @@ export default function Menu() {
                     </div>
                 </div>
                 :
-                <a type="button" id="openMenu" onClick={menuIsOpen}>
+                <button id="openMenu" onClick={menuIsOpen}>
                     <List size={iconSize} color={iconColor} />
-                </a>
+                </button>
             }
         </>
     )
