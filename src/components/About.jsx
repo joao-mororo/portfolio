@@ -7,7 +7,7 @@ export default function About() {
     return (
         <div id="About">
             <div id="description">
-                <header>Me, Myself and I</header>
+                <header>{i18n.t('about.about_me')}</header>
                 <div>
                     {/* <p>Sou um desenvolvedor Front-End localizado no Brasil. Tenho um interesse particular em sites responsivos e criação de experiências de usuário intuitivas e dinâmicas.</p>
                     <p>Pessoa bem organizada, solucionadora de problemas e com atenção aos detalhes. Fã de jogos e séries de TV. Uma pessoa reservada mas que interaje bem com os colegas.</p>

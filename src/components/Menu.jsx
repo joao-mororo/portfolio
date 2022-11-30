@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import * as Constants from './Constants'
+import { i18n } from "../translate/i18n";
 import { 
     X,
     List,
@@ -63,9 +64,9 @@ export default function Menu() {
                         <p>João Vitor</p>
                     </div>
                     <div id="menuOptions">
-                        <a href="#About" onClick={menuIsOpen}>About me</a>
-                        <a href="#sayHello" onClick={menuIsOpen}>Contact me</a>
-                        <a type="button" onClick={changeLanguage}>Translate</a>
+                        <a href="#About" onClick={menuIsOpen}>{i18n.t('menu.about_me')}</a>
+                        <a href="#sayHello" onClick={menuIsOpen}>{i18n.t('menu.contact_me')}</a>
+                        <a type="button" onClick={changeLanguage}>{i18n.t('menu.translate')}</a>
                     </div>
                     <div id="menuSocial">
                         <a href={Constants.LINKS.github} target="_blank" rel="noreferrer"><Github size={socialIconSize} /></a>

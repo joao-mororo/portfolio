@@ -17,13 +17,13 @@ export default function AboutMe(props) {
             {(isDesktopOrLaptop || (isTabletOrMobile && !isPortrait)) && <Sidebar />}
             {(isTabletOrMobile && isPortrait) && <Menu />}
             {isTabletOrMobile &&
-                <Button as="a" id="sayHello-button" href="#sayHello" variant="primary">Say Hello!</Button>
+                <Button as="a" id="sayHello-button" href="#sayHello" variant="primary">{i18n.t('home.say_hello')}</Button>
             }
             <div id="home-message">
                 <h1>
-                    <p>{i18n.t('about_me.hi')}</p>
-                    <p>{i18n.t('about_me.im')}</p>
-                    <p>{i18n.t('about_me.developer')}</p>
+                    <p>{i18n.t('home.hi')}</p>
+                    <p>{i18n.t('home.im')}</p>
+                    <p>{i18n.t('home.developer')}</p>
                 </h1>
                 <p>Front-End Developer | React.js</p>
             </div>
