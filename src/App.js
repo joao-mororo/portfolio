@@ -3,6 +3,7 @@ import { ArrowUp } from "react-bootstrap-icons";
 import Home from "./components/Home";
 import About from "./components/About";
 import Skills from "./components/Skills";
+import Experience from "./components/Experience";
 import SayHello from "./components/SayHello";
 import Timeline from "./components/Timelime";
 import * as Constants from './components/Constants'
@@ -10,9 +11,9 @@ import './css/index.css'
 
 function App() {
 
-  React.useEffect(() => {
-    document.title = 'João Vitor | Front-End Developer'
-  })
+  // React.useEffect(() => {
+  //   document.title = 'João Vitor | Front-End Developer'
+  // })
 
   function toTop() {
     document.body.scrollTop = 0; // For Safari
@@ -36,6 +37,7 @@ function App() {
       <Home />
       <About />
       <Skills />
+      <Experience />
       <SayHello />
       {/* <Timeline events={Constants.timeline_events} /> */}
     </>
