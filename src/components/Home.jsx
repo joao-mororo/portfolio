@@ -25,7 +25,7 @@ export default function AboutMe(props) {
                     <p>{i18n.t('home.im')}</p>
                     <p>{i18n.t('home.developer')}</p>
                 </h1>
-                <p>Front-End Developer | React.js</p>
+                <footer>Front-End Developer | React.js</footer>
             </div>
         </div>
     )

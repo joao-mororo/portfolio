@@ -18,18 +18,6 @@ export default function Menu() {
     const iconColor = '#fff'
     const socialIconSize = 23
 
-    function changeLanguage() {
-        let language = localStorage.getItem(Constants.I18N_STORAGE_KEY)
-
-        if (language === 'en') {
-            localStorage.setItem(Constants.I18N_STORAGE_KEY, 'pt')
-        } else {
-            localStorage.setItem(Constants.I18N_STORAGE_KEY, 'en')
-        }
-
-        window.location.reload(false)
-    }
-
     // remove body scroll when menu is open
     useEffect(() => {
         const scroll = document.getElementsByTagName('body')[0]
@@ -49,6 +37,18 @@ export default function Menu() {
             button.style.display = 'block'
         }
     }, [menu])
+
+    function changeLanguage() {
+        let language = localStorage.getItem(Constants.I18N_STORAGE_KEY)
+
+        if (language === 'en') {
+            localStorage.setItem(Constants.I18N_STORAGE_KEY, 'pt')
+        } else {
+            localStorage.setItem(Constants.I18N_STORAGE_KEY, 'en')
+        }
+
+        window.location.reload(false)
+    }
 
     return (
         <>

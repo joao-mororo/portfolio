@@ -6,15 +6,26 @@
     background-color: black;
     border-radius: 25px;
     margin: 0 5%;
-    /* width: 7%; */
+    width: 65px;
 }
 
 #sidebar a {
     margin: 20px;
     color: #fff;
+    transition: 0.1s;
+}
+
+#sidebar svg {
     transition: 0.2s;
 }
 
 #sidebar a:hover {
     color: #0d6efd;
+    /* margin: 25px 0; */
+    
+}
+
+#sidebar svg:hover {
+    height: 35px;
+    width: 35px;
 }

@@ -22,8 +22,8 @@ h1 > p {
     font-size: 200%;
 }
 
-#Home p {
-    color: rgb(13, 110, 253);
+#Home footer {
+    color: rgb(13, 110, 253, 0.7);
     letter-spacing: 4px;
 }
 

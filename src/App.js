@@ -5,15 +5,10 @@ import About from "./components/About";
 import Skills from "./components/Skills";
 import Experience from "./components/Experience";
 import SayHello from "./components/SayHello";
-import Timeline from "./components/Timelime";
-import * as Constants from './components/Constants'
+import Copyright from './components/Copyright'
 import './css/index.css'
 
 function App() {
-
-  // React.useEffect(() => {
-  //   document.title = 'João Vitor | Front-End Developer'
-  // })
 
   function toTop() {
     document.body.scrollTop = 0; // For Safari
@@ -39,6 +34,7 @@ function App() {
       <Skills />
       <Experience />
       <SayHello />
+      <Copyright name="João Vitor" />
       {/* <Timeline events={Constants.timeline_events} /> */}
     </>
   );
