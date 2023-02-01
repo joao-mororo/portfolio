@@ -66,6 +66,7 @@ export default function Menu() {
                     <div id="menuOptions">
                         <a href="#About" onClick={menuIsOpen}>{i18n.t('menu.about_me')}</a>
                         <a href="#experience" onClick={menuIsOpen}>{i18n.t('menu.experience')}</a>
+                        <a href="#projects" onClick={menuIsOpen}>{i18n.t('works.some_works')}</a>
                         <a href="#sayHello" onClick={menuIsOpen}>{i18n.t('menu.contact_me')}</a>
                         <a type="button" onClick={changeLanguage}>{i18n.t('menu.translate')}</a>
                     </div>

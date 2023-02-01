@@ -1,12 +1,10 @@
 import React from "react";
 import {
     PersonFill,
-    Github,
-    Linkedin,
-    Instagram,
     ChatDotsFill,
     Translate
 } from "react-bootstrap-icons";
+import { BsGridFill, BsInstagram, BsLinkedin, BsGithub } from 'react-icons/bs'
 import * as Constants from './Constants'
 import '../css/Sidebar.css'
 
@@ -38,7 +36,7 @@ export default function Sidebar() {
                 target="_blank"
                 rel="noreferrer"
             >
-                <Github size={iconSize} />
+                <BsGithub size={iconSize} />
             </a>
 
             <a 
@@ -46,7 +44,7 @@ export default function Sidebar() {
                 target="_blank"
                 rel="noreferrer"
             >
-                <Linkedin size={iconSize} />
+                <BsLinkedin size={iconSize} />
             </a>
 
             <a 
@@ -54,7 +52,13 @@ export default function Sidebar() {
                 target="_blank"
                 rel="noreferrer"
             >
-                <Instagram size={iconSize} />
+                <BsInstagram size={iconSize} />
+            </a>
+
+            <a 
+                href="#experience"
+            >
+                <BsGridFill size={iconSize} />
             </a>
 
             <a 
@@ -63,12 +67,11 @@ export default function Sidebar() {
                 <ChatDotsFill size={iconSize} />
             </a>
 
-            <a 
-                type="button" 
+            <button 
                 onClick={changeLanguage}
             >
                 <Translate size={iconSize} />
-            </a>
+            </button>
         </div>
     )
 }
