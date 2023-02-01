@@ -1,4 +1,4 @@
-#About {
+#about {
     width: 100%;
     padding: 15px;
     background-color: #0d6efd;
@@ -41,7 +41,7 @@
 }
 
 @media (max-width: 1224px) {
-    #About {
+    #about {
         flex-direction: column;
     }
 

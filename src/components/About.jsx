@@ -5,7 +5,7 @@ import '../css/About.css'
 
 export default function About() {
     return (
-        <div id="About">
+        <section id="about">
             <div id="description">
                 <header>{i18n.t('about.about_me')}</header>
                 <div>
@@ -20,6 +20,6 @@ export default function About() {
             <div id="avatar">
                 <img src={avatar} alt="avatar" />
             </div>
-        </div>
+        </section>
     )
 }

@@ -1,11 +1,15 @@
 import React from "react";
-import { ArrowUp } from "react-bootstrap-icons";
+import { BsArrowUp } from 'react-icons/bs'
+
 import Home from "./components/Home";
 import About from "./components/About";
 import Skills from "./components/Skills";
 import Experience from "./components/Experience";
+import Projects from "./components/Projects";
 import SayHello from "./components/SayHello";
 import Copyright from './components/Copyright'
+
+import projects from "./data/projects";
 import './css/index.css'
 
 function App() {
@@ -28,14 +32,14 @@ function App() {
 
   return (
     <>
-      <button id="toTopButton" onClick={toTop} title="Go to top"><ArrowUp size={20} /></button>
+      <button id="toTopButton" onClick={toTop} title="Go to top"><BsArrowUp size={20} /></button>
       <Home />
       <About />
       <Skills />
       <Experience />
+      <Projects projects={projects} />
       <SayHello />
       <Copyright name="João Vitor" />
-      {/* <Timeline events={Constants.timeline_events} /> */}
     </>
   );
 }

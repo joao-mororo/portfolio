@@ -65,6 +65,7 @@ export default function SayHello() {
                 pauseOnHover
                 theme="colored"
             />
+            <header>{i18n.t('home.say_hello')}</header>
             <form autoComplete="off">
                 <input
                     id="name"

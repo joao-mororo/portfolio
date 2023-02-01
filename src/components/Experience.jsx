@@ -6,7 +6,7 @@ export default function Experience() {
     return (
         <div id="experience">
             <div id="academic-formation">
-                <h3>{i18n.t('experience.academic_formation_header')}</h3>
+                <h2>{i18n.t('experience.academic_formation_header')}</h2>
                 <details>
                     <summary>{i18n.t('experience.academic_formation.tech_title')}</summary>
                     <p>{i18n.t('experience.academic_formation.tech_description')}</p>
@@ -21,7 +21,7 @@ export default function Experience() {
                 </details>
             </div>
             <div id="profissional-experience">
-                <h3>{i18n.t('experience.profissional_experience_header')}</h3>
+                <h2>{i18n.t('experience.profissional_experience_header')}</h2>
                 <details>
                     <summary>{i18n.t('experience.profissional_experience.moura_title')}</summary>
                     <p>{i18n.t('experience.profissional_experience.moura_description')}</p>

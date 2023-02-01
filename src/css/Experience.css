@@ -3,9 +3,10 @@
     display: flex;
 }
 
-#experience h3 {
+#experience h2 {
     color: #0d6efd;
     text-align: center;
+    /* font-family: 'Roboto', sans-serif; */
 }
 
 #experience details {
