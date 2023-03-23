@@ -31,7 +31,7 @@ const messages = {
             },
             say_hello: {
                 send: 'Enviar',
-                clear: 'Limpar',
+                sending: 'Enviando...',
                 name: 'Nome',
                 subject: 'Assunto',
                 message: 'Mensagem',

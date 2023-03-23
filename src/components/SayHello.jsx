@@ -1,41 +1,46 @@
 import React, { useState } from "react";
-import '../css/SayHello.css'
-import * as Constants from './Constants'
 import { Button } from "react-bootstrap";
-import emailjs from '@emailjs/browser'
+import "../styles/SayHello.css";
+import * as Constants from "./Constants";
+import { IoSend } from "react-icons/io5";
+import emailjs from "@emailjs/browser";
 import { i18n } from "../translate/i18n";
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 export default function SayHello() {
-    const [name, setName] = useState('')
-    const [email, setEmail] = useState('')
-    const [subject, setSubject] = useState('')
-    const [message, setMessage] = useState('')
+    const [name, setName] = useState("");
+    const [email, setEmail] = useState("");
+    const [subject, setSubject] = useState("");
+    const [message, setMessage] = useState("");
+    const [sending, setSending] = useState(false);
 
     function clear() {
         // document.getElementById('name').value = ''
         // document.getElementById('email').value = ''
         // document.getElementById('subject').value = ''
         // document.getElementById('message').value = ''
-        setName('')
-        setEmail('')
-        setSubject('')
-        setMessage('')
+        setName("");
+        setEmail("");
+        setSubject("");
+        setMessage("");
     }
 
     function submit() {
-        if (name === '' || email === '' || subject === '' || message === '') {
-            toast.error(i18n.t('say_hello.empty'), Constants.DEFAULT_TOAST_CONFIG)
-            return
+        setSending(true);
+
+        if (name === "" || email === "" || subject === "" || message === "") {
+            toast.error(i18n.t("say_hello.empty"), Constants.DEFAULT_TOAST_CONFIG);
+            setSending(false);
+            return;
         }
 
         const templateParams = {
             from_name: name,
             email: email,
             subject: subject,
-            message: message
-        }
+            message: message,
+        };
 
         emailjs.send(
             Constants.EMAILJS.serviceID,
@@ -43,12 +48,19 @@ export default function SayHello() {
             templateParams,
             Constants.EMAILJS.publicKey
         ).then(() => {
-            toast.info(i18n.t('say_hello.toast_success'), Constants.DEFAULT_TOAST_CONFIG)
-            clear()
-        }, (err) => {
-            toast.error(i18n.t('say_hello.toast_error'), Constants.DEFAULT_TOAST_CONFIG)
-        })
-
+            toast.info(
+                i18n.t("say_hello.toast_success"),
+                Constants.DEFAULT_TOAST_CONFIG
+            );
+            clear();
+        },
+            (err) => {
+                toast.error(
+                    i18n.t("say_hello.toast_error"),
+                    Constants.DEFAULT_TOAST_CONFIG
+                );
+            }
+        ).finally(() => setSending(false));
     }
 
     return (
@@ -65,13 +77,13 @@ export default function SayHello() {
                 pauseOnHover
                 theme="colored"
             />
-            <header>{i18n.t('home.say_hello')}</header>
+            <header>{i18n.t("home.say_hello")}</header>
             <form autoComplete="off">
                 <input
                     id="name"
                     className="formInput"
                     type="text"
-                    placeholder={i18n.t('say_hello.name')}
+                    placeholder={i18n.t("say_hello.name")}
                     onChange={(e) => setName(e.target.value)}
                     value={name}
                 />
@@ -89,7 +101,7 @@ export default function SayHello() {
                     id="subject"
                     className="formInput"
                     type="text"
-                    placeholder={i18n.t('say_hello.subject')}
+                    placeholder={i18n.t("say_hello.subject")}
                     onChange={(e) => setSubject(e.target.value)}
                     value={subject}
                 />
@@ -97,16 +109,26 @@ export default function SayHello() {
                 <textarea
                     id="message"
                     className="formInput"
-                    placeholder={i18n.t('say_hello.message')}
+                    placeholder={i18n.t("say_hello.message")}
                     onChange={(e) => setMessage(e.target.value)}
                     value={message}
                 />
                 <section>
-                    <Button id="clear" onClick={clear} variant="outline-primary" size="lg">{i18n.t('say_hello.clear')}</Button>
-                    <Button id="submit" onClick={submit} variant="primary" size="lg">{i18n.t('say_hello.send')}</Button>
+                    <Button
+                        disabled={sending}
+                        id="submit"
+                        onClick={submit}
+                        variant="outline-primary"
+                        size="lg"
+                    >
+                        {!sending ? (
+                            <>{i18n.t("say_hello.send")} <IoSend /></>
+                        ) : (
+                            <>{i18n.t("say_hello.sending")}</>
+                        )}
+                    </Button>
                 </section>
-
             </form>
         </div>
-    )
+    );
 }

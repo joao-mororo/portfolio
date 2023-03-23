@@ -1,5 +1,5 @@
 import React from "react";
-import '../css/Experience.css'
+import '../styles/Experience.css'
 import { i18n } from "../translate/i18n";
 
 export default function Experience() {

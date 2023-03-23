@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import '../css/Copyright.css'
+import '../styles/Copyright.css'
 
 export default function Copyright(props) {
     const [year, setYear] = useState()

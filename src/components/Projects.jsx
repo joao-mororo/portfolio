@@ -1,6 +1,6 @@
 import React from "react";
 import { i18n } from "../translate/i18n";
-import '../css/Projects.css'
+import '../styles/Projects.css'
 
 export default function Projects({ projects }) {
 
@@ -11,9 +11,9 @@ export default function Projects({ projects }) {
                 {projects.length === 0 ?
                     <h1 style={{ color: '#0d6efd' }}>No projects found</h1>
                     :
-                    projects.map((project) => {
+                    projects.map((project, i) => {
                         return (
-                            <div className="project-card" key={project.id}>
+                            <div className="project-card" key={i}>
                                 <figure>
                                     <img className="project-image" src={project.image} alt="project-img" />
                                     <figcaption>

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import * as Constants from './Constants'
 import { i18n } from "../translate/i18n";
-import { 
+import {
     X,
     List,
     Github,
@@ -9,7 +9,7 @@ import {
     Instagram,
     Code
 } from "react-bootstrap-icons";
-import '../css/Menu.css'
+import '../styles/Menu.css'
 
 export default function Menu() {
     const [menu, setMenu] = useState(false);
@@ -52,8 +52,7 @@ export default function Menu() {
 
     return (
         <>
-            {menu 
-                ?
+            {menu ? (
                 <div id="Menu">
                     <button id="closeMenu" onClick={menuIsOpen}>
                         <X size={iconSize} color={iconColor} />
@@ -68,7 +67,7 @@ export default function Menu() {
                         <a href="#experience" onClick={menuIsOpen}>{i18n.t('menu.experience')}</a>
                         <a href="#projects" onClick={menuIsOpen}>{i18n.t('works.some_works')}</a>
                         <a href="#sayHello" onClick={menuIsOpen}>{i18n.t('menu.contact_me')}</a>
-                        <a type="button" onClick={changeLanguage}>{i18n.t('menu.translate')}</a>
+                        <button onClick={changeLanguage}>{i18n.t('menu.translate')}</button>
                     </div>
                     <div id="menuSocial">
                         <a href={Constants.LINKS.github} target="_blank" rel="noreferrer"><Github size={socialIconSize} /></a>
@@ -76,10 +75,11 @@ export default function Menu() {
                         <a href={Constants.LINKS.instagram} target="_blank" rel="noreferrer"><Instagram size={socialIconSize} /></a>
                     </div>
                 </div>
-                :
+            ) : (
                 <button id="openMenu" onClick={menuIsOpen}>
                     <List size={iconSize} color={iconColor} />
                 </button>
+            )
             }
         </>
     )

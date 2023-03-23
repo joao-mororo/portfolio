@@ -1,5 +1,5 @@
 import React from "react";
-import '../css/Skills.css'
+import '../styles/Skills.css'
 import htmlLogo from '../images/html5.svg'
 import cssLogo from '../images/css3-alt.svg'
 import jsLogo from '../images/square-js.svg'

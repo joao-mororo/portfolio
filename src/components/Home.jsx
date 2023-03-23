@@ -1,15 +1,16 @@
 import React from "react";
 import Menu from "./Menu";
-import Sidebar from "./Sidebar";
+// import Sidebar from "./Sidebar";
+import Sidebar from "./Sidebar/Sidebar";
 import { useMediaQuery } from "react-responsive";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Button } from 'react-bootstrap'
 import { i18n } from "../translate/i18n";
-import '../css/Home.css'
+import '../styles/Home.css'
 
 export default function AboutMe(props) {
-    const isDesktopOrLaptop = useMediaQuery({ query: '(min-width: 1224px)' })
-    const isTabletOrMobile = useMediaQuery({ query: '(max-width: 1224px)' })
+    const isDesktopOrLaptop = useMediaQuery({ query: '(min-width: 600px)' })
+    const isTabletOrMobile = useMediaQuery({ query: '(max-width: 600px)' })
     const isPortrait = useMediaQuery({ query: '(orientation: portrait)' })
 
     return (

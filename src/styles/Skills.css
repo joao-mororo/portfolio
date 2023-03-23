@@ -13,7 +13,7 @@
 	user-select: none;
 }
 
-@media (max-width: 1224px) {
+@media (max-width: 600px) {
     .skillLogo {
         width: 40px;
     }

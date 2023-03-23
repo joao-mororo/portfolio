@@ -41,7 +41,7 @@
     margin: 5%;
 }
 
-@media (max-width: 1224px) {
+@media (max-width: 600px) {
     #experience {
         flex-direction: column;
         align-items: center;

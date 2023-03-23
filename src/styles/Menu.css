@@ -41,7 +41,10 @@
     justify-content: center;
     height: 45%;
 }
-#menuOptions a {
+#menuOptions a,
+#menuOptions button {
+    background-color: transparent;
+    border: none;
     text-decoration: none;
     color: #fff;
     padding: 10px 0;

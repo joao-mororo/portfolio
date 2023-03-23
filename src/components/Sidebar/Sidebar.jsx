@@ -5,8 +5,8 @@ import {
     Translate
 } from "react-bootstrap-icons";
 import { BsGridFill, BsInstagram, BsLinkedin, BsGithub } from 'react-icons/bs'
-import * as Constants from './Constants'
-import '../css/Sidebar.css'
+import * as Constants from '../Constants'
+import './Sidebar.style.css'
 
 export default function Sidebar() {
     const iconSize = 25
@@ -24,7 +24,7 @@ export default function Sidebar() {
     }
 
     return (
-        <div id="sidebar">
+        <div className="sidebar">
             <a 
                 href="#About"
             >

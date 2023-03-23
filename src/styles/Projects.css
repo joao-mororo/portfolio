@@ -32,6 +32,7 @@
     position: relative;
     overflow: hidden;
     border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 .project-card figcaption {
@@ -83,7 +84,7 @@
 }
 
 
-@media (max-width: 1224px) {
+@media (max-width: 600px) {
     #projects-grid {
         flex-direction: column;
         margin: 0;
