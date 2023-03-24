@@ -1,12 +1,13 @@
 import React, { useState } from "react";
+import Header from "./Header/Header";
 import { Button } from "react-bootstrap";
-import "../styles/SayHello.css";
-import * as Constants from "./Constants";
-import { IoSend } from "react-icons/io5";
-import emailjs from "@emailjs/browser";
 import { i18n } from "../translate/i18n";
-import { ToastContainer, toast } from "react-toastify";
+import { IoSend } from "react-icons/io5";
+import { toast } from "react-toastify";
+import emailjs from "@emailjs/browser";
+import * as Constants from "./Constants";
 import "react-toastify/dist/ReactToastify.css";
+import "../styles/SayHello.css";
 
 export default function SayHello() {
     const [name, setName] = useState("");
@@ -65,19 +66,7 @@ export default function SayHello() {
 
     return (
         <div id="sayHello">
-            <ToastContainer
-                position="bottom-right"
-                autoClose={5000}
-                hideProgressBar={false}
-                newestOnTop={false}
-                closeOnClick
-                rtl={false}
-                pauseOnFocusLoss
-                draggable
-                pauseOnHover
-                theme="colored"
-            />
-            <header>{i18n.t("home.say_hello")}</header>
+            <Header>{i18n.t("home.say_hello")}</Header>
             <form autoComplete="off">
                 <input
                     id="name"

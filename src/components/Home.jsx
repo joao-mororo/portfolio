@@ -1,5 +1,5 @@
 import React from "react";
-import Menu from "./Menu";
+import Menu from "./MobileMenu/Menu";
 // import Sidebar from "./Sidebar";
 import Sidebar from "./Sidebar/Sidebar";
 import { useMediaQuery } from "react-responsive";
@@ -8,7 +8,7 @@ import { Button } from 'react-bootstrap'
 import { i18n } from "../translate/i18n";
 import '../styles/Home.css'
 
-export default function AboutMe(props) {
+const Home = () => {
     const isDesktopOrLaptop = useMediaQuery({ query: '(min-width: 600px)' })
     const isTabletOrMobile = useMediaQuery({ query: '(max-width: 600px)' })
     const isPortrait = useMediaQuery({ query: '(orientation: portrait)' })
@@ -31,3 +31,5 @@ export default function AboutMe(props) {
         </div>
     )
 }
+
+export default Home

@@ -1,12 +1,13 @@
 import React from "react";
-import '../styles/Experience.css'
 import { i18n } from "../translate/i18n";
+import Header from "./Header/Header";
+import '../styles/Experience.css'
 
 export default function Experience() {
     return (
         <div id="experience">
             <div id="academic-formation">
-                <h2>{i18n.t('experience.academic_formation_header')}</h2>
+                <Header>{i18n.t('experience.academic_formation_header')}</Header>
                 <details>
                     <summary>{i18n.t('experience.academic_formation.tech_title')}</summary>
                     <p>{i18n.t('experience.academic_formation.tech_description')}</p>
@@ -21,7 +22,7 @@ export default function Experience() {
                 </details>
             </div>
             <div id="profissional-experience">
-                <h2>{i18n.t('experience.profissional_experience_header')}</h2>
+                <Header>{i18n.t('experience.profissional_experience_header')}</Header>
                 <details>
                     <summary>{i18n.t('experience.profissional_experience.moura_title')}</summary>
                     <p>{i18n.t('experience.profissional_experience.moura_description')}</p>

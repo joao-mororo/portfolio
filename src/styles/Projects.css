@@ -8,11 +8,11 @@
     color: #0d6efd;
 }
 
-#projects .header {
+/* #projects .header {
     color: #0d6efd;
     font-size: 200%;
     font-family: 'Roboto';
-}
+} */
 
 #projects-grid {
     display: flex;

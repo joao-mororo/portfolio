@@ -4,8 +4,10 @@ import {
     ChatDotsFill,
     Translate
 } from "react-bootstrap-icons";
-import { BsGridFill, BsInstagram, BsLinkedin, BsGithub } from 'react-icons/bs'
+import { BsGridFill, BsLinkedin, BsGithub, BsDiscord } from 'react-icons/bs'
 import * as Constants from '../Constants'
+import { toast } from "react-toastify";
+import { i18n } from "../../translate/i18n";
 import './Sidebar.style.css'
 
 export default function Sidebar() {
@@ -23,8 +25,15 @@ export default function Sidebar() {
         window.location.reload(false)
     }
 
+    const copyToClipboard = (text) => {
+        navigator.clipboard.writeText(text);
+        toast.info(i18n.t('sidebar.toast_user'), Constants.DEFAULT_TOAST_CONFIG)
+    }
+
     return (
         <div className="sidebar">
+
+
             <a 
                 href="#About"
             >
@@ -47,13 +56,19 @@ export default function Sidebar() {
                 <BsLinkedin size={iconSize} />
             </a>
 
-            <a 
+            {/* <a 
                 href={Constants.LINKS.instagram}
                 target="_blank"
                 rel="noreferrer"
             >
                 <BsInstagram size={iconSize} />
-            </a>
+            </a> */}
+
+            <button
+                onClick={() => copyToClipboard(Constants.LINKS.discord)}
+            >
+                <BsDiscord size={iconSize} />
+            </button>
 
             <a 
                 href="#experience"

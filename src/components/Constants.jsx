@@ -1,18 +1,13 @@
 export const LINKS = {
     linkedin: 'https://www.linkedin.com/in/jo%C3%A3o-vitor-moror%C3%B3-9639b321b',
     instagram: 'https://www.instagram.com/joaovmororo_/',
-    github: 'https://github.com/joao-mororo'
+    github: 'https://github.com/joao-mororo',
+    discord: 'Sleepy#7820'
 }
 
 export const I18N_STORAGE_KEY = 'i18nextLng'
 
 export const DEFAULT_LANGUAGE = 'en'
-
-// export const DEFAULT_COLORS = {
-//     blue: '#0d6efd',
-//     black: 'black',
-//     input: '#2b2b2b'
-// }
 
 export const EMAILJS = {
     serviceID: 'service_keh0pod',

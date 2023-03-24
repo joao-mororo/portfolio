@@ -13,6 +13,9 @@ const messages = {
                 developer: 'web developer',
                 say_hello: 'Say Hello!'
             },
+            sidebar: {
+                toast_user: 'User copied to clipboard'
+            },
             experience: {
                 academic_formation_header: 'Academic formation',
                 academic_formation: {

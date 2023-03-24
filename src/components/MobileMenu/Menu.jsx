@@ -1,17 +1,16 @@
 import React, { useState, useEffect } from "react";
-import * as Constants from './Constants'
-import { i18n } from "../translate/i18n";
+import * as Constants from '../Constants'
+import { i18n } from "../../translate/i18n";
 import {
     X,
     List,
-    Github,
-    Linkedin,
-    Instagram,
     Code
 } from "react-bootstrap-icons";
-import '../styles/Menu.css'
+import { BsGithub, BsLinkedin, BsDiscord } from "react-icons/bs";
+import { toast } from "react-toastify";
+import './Menu.style.css'
 
-export default function Menu() {
+const Menu = () => {
     const [menu, setMenu] = useState(false);
     const menuIsOpen = () => setMenu(!menu)
     const iconSize = 40
@@ -50,6 +49,11 @@ export default function Menu() {
         window.location.reload(false)
     }
 
+    const copyToClipboard = (text) => {
+        navigator.clipboard.writeText(text);
+        toast.info(i18n.t('sidebar.toast_user'), Constants.DEFAULT_TOAST_CONFIG)
+    }
+
     return (
         <>
             {menu ? (
@@ -70,9 +74,10 @@ export default function Menu() {
                         <button onClick={changeLanguage}>{i18n.t('menu.translate')}</button>
                     </div>
                     <div id="menuSocial">
-                        <a href={Constants.LINKS.github} target="_blank" rel="noreferrer"><Github size={socialIconSize} /></a>
-                        <a href={Constants.LINKS.linkedin} target="_blank" rel="noreferrer"><Linkedin size={socialIconSize} /></a>
-                        <a href={Constants.LINKS.instagram} target="_blank" rel="noreferrer"><Instagram size={socialIconSize} /></a>
+                        <a href={Constants.LINKS.github} target="_blank" rel="noreferrer"><BsGithub size={socialIconSize} /></a>
+                        <a href={Constants.LINKS.linkedin} target="_blank" rel="noreferrer"><BsLinkedin size={socialIconSize} /></a>
+                        {/* <a href={Constants.LINKS.instagram} target="_blank" rel="noreferrer"><Instagram size={socialIconSize} /></a> */}
+                        <button onClick={() => copyToClipboard(Constants.LINKS.discord)}><BsDiscord size={socialIconSize} /></button>
                     </div>
                 </div>
             ) : (
@@ -84,3 +89,5 @@ export default function Menu() {
         </>
     )
 }
+
+export default Menu
