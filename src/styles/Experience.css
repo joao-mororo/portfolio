@@ -1,24 +1,24 @@
-#experience {
+.experience {
     width: 100%;
     display: flex;
 }
 
-#experience h2 {
+.experience h2 {
     color: #0d6efd;
     text-align: center;
     /* font-family: 'Roboto', sans-serif; */
 }
 
-#experience details {
+.experience details {
     margin: 5px 0;
     transition-duration: 0.3s;
 }
 
-#experience details[open] {
+.experience details[open] {
     margin: 10px 0;
 }
 
-#experience p {
+.experience p {
     border: solid 1px #0d6efd;
     border-top: none;
     border-bottom-left-radius: 5px;
@@ -27,7 +27,7 @@
     color: #fff;
 }
 
-#experience summary {
+.experience summary {
     background-color: #0d6efd;
     color: #fff;
     padding: 10px;
@@ -35,21 +35,21 @@
     border-radius: 5px;
 }
 
-#academic-formation,
-#profissional-experience {
+.academic-formation,
+.profissional-experience {
     width: 50%;
     margin: 5%;
 }
 
 @media (max-width: 600px) {
-    #experience {
+    .experience {
         flex-direction: column;
         align-items: center;
         margin: 20% 0;
     }
 
-    #academic-formation,
-    #profissional-experience {
+    .academic-formation,
+    .profissional-experience {
         width: 90%;
     }
 

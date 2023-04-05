@@ -1,19 +1,22 @@
-import React from "react"
+import React, { useContext } from "react"
 
 import programmingIMG from '../images/undraw_programming_re_kg9v.svg'
 import waveTop from '../images/wave-top.svg'
 import waveDown from '../images/wave-down.svg'
 
+import { ScrollContext } from "../contexts/scroll"
+
 import { i18n } from "../translate/i18n"
 import '../styles/About.css'
 
 export default function About() {
+    const {about} = useContext(ScrollContext)
     return (
         <>
             {/* <img className="img-wave" src={waveTop} alt="" /> */}
 
-            <section id="about">
-                <div id="description">
+            <section className="about" ref={about}>
+                <div className="description">
                     <header>{i18n.t('about.about_me')}</header>
                     <div>
                         {/* <p>Sou um desenvolvedor Front-End localizado no Brasil. Tenho um interesse particular em sites responsivos e criação de experiências de usuário intuitivas e dinâmicas.</p>
@@ -24,7 +27,7 @@ export default function About() {
                         <p>{i18n.t('about.p3')}</p>
                     </div>
                 </div>
-                <div id="avatar">
+                <div className="avatar">
                     <img src={programmingIMG} alt="avatar" />
                 </div>
             </section>

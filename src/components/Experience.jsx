@@ -1,12 +1,14 @@
-import React from "react";
-import { i18n } from "../translate/i18n";
+import React, { useContext } from "react";
 import Header from "./Header/Header";
+import { i18n } from "../translate/i18n";
+import { ScrollContext } from "../contexts/scroll";
 import '../styles/Experience.css'
 
 export default function Experience() {
+    const { experience } = useContext(ScrollContext)
     return (
-        <div id="experience">
-            <div id="academic-formation">
+        <div className="experience" ref={experience}>
+            <div className="academic-formation">
                 <Header>{i18n.t('experience.academic_formation_header')}</Header>
                 <details>
                     <summary>{i18n.t('experience.academic_formation.tech_title')}</summary>
@@ -21,7 +23,7 @@ export default function Experience() {
                     <p>{i18n.t('experience.academic_formation.course_description')}</p>
                 </details>
             </div>
-            <div id="profissional-experience">
+            <div className="profissional-experience">
                 <Header>{i18n.t('experience.profissional_experience_header')}</Header>
                 <details>
                     <summary>{i18n.t('experience.profissional_experience.moura_title')}</summary>

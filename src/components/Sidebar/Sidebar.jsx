@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import {
     PersonFill,
     ChatDotsFill,
@@ -9,8 +9,10 @@ import * as Constants from '../Constants'
 import { toast } from "react-toastify";
 import { i18n } from "../../translate/i18n";
 import './Sidebar.style.css'
+import { ScrollContext } from "../../contexts/scroll";
 
 export default function Sidebar() {
+    const { scrollToSection, about, experience, sayhello } = useContext(ScrollContext)
     const iconSize = 25
 
     function changeLanguage() {
@@ -34,13 +36,13 @@ export default function Sidebar() {
         <div className="sidebar">
 
 
-            <a 
-                href="#About"
+            <button
+                onClick={() => scrollToSection(about)}
             >
                 <PersonFill size={iconSize} />
-            </a>
+            </button>
 
-            <a 
+            <a
                 href={Constants.LINKS.github}
                 target="_blank"
                 rel="noreferrer"
@@ -48,7 +50,7 @@ export default function Sidebar() {
                 <BsGithub size={iconSize} />
             </a>
 
-            <a 
+            <a
                 href={Constants.LINKS.linkedin}
                 target="_blank"
                 rel="noreferrer"
@@ -70,19 +72,19 @@ export default function Sidebar() {
                 <BsDiscord size={iconSize} />
             </button>
 
-            <a 
-                href="#experience"
+            <button
+                onClick={() => scrollToSection(experience)}
             >
                 <BsGridFill size={iconSize} />
-            </a>
+            </button>
 
-            <a 
-                href="#sayHello"
+            <button
+                onClick={() => scrollToSection(sayhello)}
             >
                 <ChatDotsFill size={iconSize} />
-            </a>
+            </button>
 
-            <button 
+            <button
                 onClick={changeLanguage}
             >
                 <Translate size={iconSize} />

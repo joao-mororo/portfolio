@@ -3,11 +3,10 @@ import { i18n } from "../translate/i18n";
 import Header from "./Header/Header";
 import '../styles/Projects.css'
 
-export default function Projects({ projects }) {
+const Projects = ({ projects }) => {
 
     return (
         <section id="projects">
-            {/* <h1 className="header">{i18n.t('works.some_works')}</h1> */}
             <Header>{i18n.t('works.some_works')}</Header>
             <div id="projects-grid">
                 {projects.length === 0 ?
@@ -29,6 +28,7 @@ export default function Projects({ projects }) {
                 }
             </div>
         </section>
-
     )
 }
+
+export default Projects

@@ -1,9 +1,10 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import Header from "./Header/Header";
 import { Button } from "react-bootstrap";
 import { i18n } from "../translate/i18n";
 import { IoSend } from "react-icons/io5";
 import { toast } from "react-toastify";
+import { ScrollContext } from "../contexts/scroll";
 import emailjs from "@emailjs/browser";
 import * as Constants from "./Constants";
 import "react-toastify/dist/ReactToastify.css";
@@ -15,12 +16,9 @@ export default function SayHello() {
     const [subject, setSubject] = useState("");
     const [message, setMessage] = useState("");
     const [sending, setSending] = useState(false);
+    const { sayhello } = useContext(ScrollContext)
 
     function clear() {
-        // document.getElementById('name').value = ''
-        // document.getElementById('email').value = ''
-        // document.getElementById('subject').value = ''
-        // document.getElementById('message').value = ''
         setName("");
         setEmail("");
         setSubject("");
@@ -65,7 +63,7 @@ export default function SayHello() {
     }
 
     return (
-        <div id="sayHello">
+        <div className="sayhello" ref={sayhello}>
             <Header>{i18n.t("home.say_hello")}</Header>
             <form autoComplete="off">
                 <input

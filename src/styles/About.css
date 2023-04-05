@@ -1,4 +1,4 @@
-#about {
+.about {
     width: 100%;
     padding: 15px;
     background-color: #0d6efd;
@@ -7,7 +7,7 @@
     align-items: center;
 }
 
-#description {
+.description {
     width: 50%;
     height: 100%;
     display: flex;
@@ -17,24 +17,24 @@
     margin: 0 30px;
 }
 
-#description header {
+.description header {
     font-size: 4rem;
     font-family: 'Roboto', sans-serif;
 }
 
-#avatar {
+.avatar {
     width: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-#avatar img {
+.avatar img {
     width: 70%;
     margin: 10%;
 }
 
-#description p {
+.description p {
     color: #fff;
     margin: 0;
     padding: 10px 0;
@@ -50,26 +50,26 @@
 }
 
 @media (max-width: 600px) {
-    #about {
+    .about {
         flex-direction: column;
     }
 
-    #description {
+    .description {
         width: 100%;
     }
 
-    #description header {
+    .description header {
         /* font-size: 4.5rem; */
         font-size: 2.7rem;
     }
 
-    #description p {
+    .description p {
         text-align: start;
         font-size: 1.2rem;
     }
 
-    #avatar,
-    #avatar > img {
+    .avatar,
+    .avatar > img {
         width: 100%;
     }
 }
