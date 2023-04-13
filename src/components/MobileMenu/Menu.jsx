@@ -27,16 +27,6 @@ const Menu = () => {
         }
     }, [menu])
 
-    // remove Say Hello button when menu is open
-    useEffect(() => {
-        const button = document.getElementById('sayHello-button')
-        if (menu && button) {
-            button.style.display = 'none'
-        } else if (!menu && button) {
-            button.style.display = 'block'
-        }
-    }, [menu])
-
     function changeLanguage() {
         let language = localStorage.getItem(Constants.I18N_STORAGE_KEY)
 
