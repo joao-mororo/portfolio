@@ -9,7 +9,7 @@
 }
 
 .header .code {
-    color: #0d6efd;
+    color: var(--blue);
     margin-left: .5rem;
 }
 

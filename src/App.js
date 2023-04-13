@@ -1,12 +1,12 @@
 import React from "react";
 import { ToastContainer } from "react-toastify";
 
-import Home from "./components/Home";
-import About from "./components/About";
-import Skills from "./components/Skills";
-import Experience from "./components/Experience";
-import Projects from "./components/Projects";
-import SayHello from "./components/SayHello";
+import Home from "./sections/Home";
+import About from "./sections/About";
+import Skills from "./sections/Skills";
+import Experience from "./sections/Experience";
+import Projects from "./sections/Projects";
+import SayHello from "./sections/SayHello";
 import Copyright from './components/Copyright/Copyright'
 import ToTopButton from "./components/ToTopButton/ToTopButton";
 

@@ -1,7 +1,7 @@
 .about {
     width: 100%;
     padding: 15px;
-    background-color: #0d6efd;
+    background-color: var(--blue);
     display: flex;
     justify-content: center;
     align-items: center;

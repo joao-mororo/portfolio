@@ -1,6 +1,6 @@
 import React from 'react'
 import './ToTopButton.style.css'
-import { BsArrowUp } from 'react-icons/bs'
+import { IoIosArrowUp } from 'react-icons/io'
 
 const ToTopButton = () => {
     function toTop() {
@@ -11,7 +11,7 @@ const ToTopButton = () => {
     function scrollFunction() {
         let mybutton = document.getElementsByClassName('toTopButton')[0]
         if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-            mybutton.style.display = "block";
+            mybutton.style.display = "flex";
         } else {
             mybutton.style.display = "none";
         }
@@ -20,7 +20,7 @@ const ToTopButton = () => {
     window.onscroll = function () { scrollFunction() };
 
     return (
-        <button className="toTopButton" onClick={toTop} title="Go to top"><BsArrowUp size={20} /></button>
+        <button className="toTopButton" onClick={toTop} title="Go to top"><IoIosArrowUp /></button>
     )
 }
 

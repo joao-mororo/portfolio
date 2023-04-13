@@ -1,11 +1,11 @@
 import React, { useState } from "react";
-import './Copyright.style.css'
+import style from './Copyright.module.css'
 
 const Copyright = ({children}) => {
     const [year] = useState(() => new Date().getFullYear())
 
     return (
-        <div id="copyright">
+        <div className={style.copyright}>
             <p>{children} &#169; Copyright {year}</p>
         </div>
     )

@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
-import Menu from "./MobileMenu/Menu";
-// import Sidebar from "./Sidebar";
-import Sidebar from "./Sidebar/Sidebar";
+import Menu from "../components/MobileMenu/Menu";
+import ScrollAnimation from "../components/ScrollAnimation";
+import Sidebar from "../components/Sidebar/Sidebar";
 import { useMediaQuery } from "react-responsive";
 import { Button } from 'react-bootstrap'
 import { i18n } from "../translate/i18n";
@@ -30,6 +30,7 @@ const Home = () => {
                 </h1>
                 <footer>Front-End Developer | React.js</footer>
             </div>
+            <ScrollAnimation />
         </section>
     )
 }

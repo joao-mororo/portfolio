@@ -19,7 +19,7 @@
 }
 
 .experience p {
-    border: solid 1px #0d6efd;
+    border: solid 1px var(--blue);
     border-top: none;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
@@ -28,7 +28,7 @@
 }
 
 .experience summary {
-    background-color: #0d6efd;
+    background-color: var(--blue);
     color: #fff;
     padding: 10px;
     outline: none;

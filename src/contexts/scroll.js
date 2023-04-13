@@ -13,6 +13,7 @@ export default function ScrollProvider({children}) {
             behavior: 'smooth'
         })
     }
+    
     return (
         <ScrollContext.Provider
             value={{scrollToSection, about, experience, sayhello}}

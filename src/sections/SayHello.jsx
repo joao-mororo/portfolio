@@ -1,12 +1,12 @@
 import React, { useContext, useState } from "react";
-import Header from "./Header/Header";
+import Header from "../components/Header/Header";
 import { Button } from "react-bootstrap";
 import { i18n } from "../translate/i18n";
 import { IoSend } from "react-icons/io5";
 import { toast } from "react-toastify";
 import { ScrollContext } from "../contexts/scroll";
 import emailjs from "@emailjs/browser";
-import * as Constants from "./Constants";
+import * as Constants from "../components/Constants";
 import "react-toastify/dist/ReactToastify.css";
 import "../styles/SayHello.css";
 
@@ -63,7 +63,7 @@ export default function SayHello() {
     }
 
     return (
-        <div className="sayhello" ref={sayhello}>
+        <section className="sayhello" ref={sayhello}>
             <Header>{i18n.t("home.say_hello")}</Header>
             <form autoComplete="off">
                 <input
@@ -116,6 +116,6 @@ export default function SayHello() {
                     </Button>
                 </section>
             </form>
-        </div>
+        </section>
     );
 }

@@ -1,3 +1,9 @@
+:root {
+  /* --blue: #0a58ca; */
+  --blue: #0d6efd;
+  --dark-blue: #0a58ca;
+}
+
 body {
   overflow-y: scroll;
   margin: 0;
@@ -25,11 +31,11 @@ body {
    
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #0d6efd; 
+  background: var(--blue); 
   border-radius: 25px;
 }
   
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #0b5ed7; 
+  background: var(--dark-blue); 
 }

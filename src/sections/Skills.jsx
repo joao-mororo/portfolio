@@ -8,11 +8,11 @@ import reactLogo from  '../images/react.svg'
 export default function Skills() {
 
     return (
-        <div id="skills">
+        <section id="skills">
             <img className="skillLogo" src={htmlLogo} alt="htmlLogo" />
             <img className="skillLogo" src={cssLogo} alt="cssLogo" />
             <img className="skillLogo" src={jsLogo} alt="jsLogo" />
             <img className="skillLogo" src={reactLogo} alt="reactLogo" />
-        </div>
+        </section>
     )
 }

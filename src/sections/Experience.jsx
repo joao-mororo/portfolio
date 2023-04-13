@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import Header from "./Header/Header";
+import Header from "../components/Header/Header";
 import { i18n } from "../translate/i18n";
 import { ScrollContext } from "../contexts/scroll";
 import '../styles/Experience.css'

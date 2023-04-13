@@ -1,6 +1,6 @@
 import React from "react";
 import { i18n } from "../translate/i18n";
-import Header from "./Header/Header";
+import Header from "../components/Header/Header";
 import '../styles/Projects.css'
 
 const Projects = ({ projects }) => {
