@@ -51,6 +51,15 @@ const messages = {
             works: {
                 some_works: 'Alguns trabalhos',
                 view_project: 'Ver projeto'
+            },
+            skills : {
+                header: 'Habilidades',
+                htmlcss: 'HTML e CSS, o básico para a criação de uma página web. Certamente, ter a base sólida é trivial para qualquer desenvolvimento.',
+                javascript: 'JavaScript, a linguagem de programação que faz as coisas acontecerem. Além de uma página bonita, é sempre bom ter uma página interativa e dinâmica.',
+                react: 'ReactJS, a lib responsável pela base de muitas aplicações. Como uma das formas mais poderosas de programar, ReactJS se destaca como uma grande tecnologia.',
+                mysql: 'Além de toda parte visual, algo para funcionar atrás da cortina. MySQL, um dos maiores bancos de dados SQL do mercado, com um grande poder de armazenamento e organização.',
+                mongo: 'SQL é muito poderoso, mas algumas vezes precisamos de algo mais flexível. Para isso, MongoDB, um banco de dados NoSQL, é a opção perfeita para a tarefa.',
+                node: 'Não poderia faltar algo para unir os dois lados da coisa. NodeJS, uma poderosa forma de construir uma API que faça bem toda a comunicação dos dois lados da aplicação.'
             }
         }
     }

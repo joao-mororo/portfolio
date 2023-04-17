@@ -1,0 +1,28 @@
+.skill-card {
+    width: 23.3333%;
+    border-radius: 10px;
+    margin: 2% 5%;
+    padding: 10px;
+    background-color: var(--blue);
+    color: #fff;
+    height: 20%;
+}
+
+.skill-body {
+    min-height: 10rem;
+}
+
+.skill-icon {
+    font-size: 4rem;
+}
+
+@media screen and (max-width: 600px) {
+    .skill-card {
+        width: 45%;
+        margin: 2% 2.5%;
+    }
+
+    .skill-icon {
+        font-size: 2rem;
+    }
+}
