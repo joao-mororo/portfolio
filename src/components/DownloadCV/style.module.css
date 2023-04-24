@@ -1,0 +1,27 @@
+.download,
+.downloaded,
+.downloaded:hover {
+    text-decoration: none;
+    padding: .5rem 1rem;
+    border-radius: 10px;
+    font-size: larger;
+}
+
+.download {
+    background-color: transparent;
+    color: #fff;
+    border: solid 1px #fff;
+    transition: .2s;
+}
+
+.downloaded,
+.downloaded:hover {
+    background-color: #bababa;
+    color: #000;
+    border: solid 1px #bababa;
+}
+
+.download:hover {
+    background-color: #fff;
+    color: #000;
+}

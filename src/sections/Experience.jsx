@@ -5,9 +5,9 @@ import { ScrollContext } from "../contexts/scroll";
 import '../styles/Experience.css'
 
 export default function Experience() {
-    const { experience } = useContext(ScrollContext)
+    const { experienceRef } = useContext(ScrollContext)
     return (
-        <div className="experience" ref={experience}>
+        <div className="experience" ref={experienceRef}>
             <div className="academic-formation">
                 <Header>{i18n.t('experience.academic_formation_header')}</Header>
                 <details>

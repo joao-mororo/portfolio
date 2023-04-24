@@ -43,10 +43,10 @@ const messages = {
                 empty: 'Fill in all fields'
             },
             about: {
-                about_me: 'Me, Myself & I',
-                p1: "I'm a Front-End developer located in Brazil. I have a particular interest in responsive websites and creating intuitive, dynamic user experiences.",
-                p2: 'Well-organised person, problem solver and with attention to detail. Fan of games and TV series. A reserved person but who interacts well with colleagues.',
-                p3: 'Interested in the entire frontend spectrum and a growing interest in backend.'
+                title: 'About me',
+                body: "I'm a highly skilled front-end developer with experience in website development projects. I have a particular interest in responsive websites and creating intuitive and dynamic user experiences. Well organized person, problem solver and with attention to detail. Always focused on offering complete and effective solutions for my clients' projects. Interested in the full spectrum of the frontend and a growing interest in the backend.",
+                downloadCV: 'Download CV',
+                downloadedCV: 'Downloaded'
             },
             works: {
                 some_works: 'Some works',

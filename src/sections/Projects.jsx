@@ -1,12 +1,14 @@
-import React from "react";
+import React, { useContext } from "react";
 import { i18n } from "../translate/i18n";
 import Header from "../components/Header/Header";
 import '../styles/Projects.css'
+import { ScrollContext } from "../contexts/scroll";
 
 const Projects = ({ projects }) => {
+    const {projectsRef} = useContext(ScrollContext)
 
     return (
-        <section id="projects">
+        <section id="projects" ref={projectsRef}>
             <Header>{i18n.t('works.some_works')}</Header>
             <div id="projects-grid">
                 {projects.length === 0 ?

@@ -1,16 +1,18 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
+import Logo from "../Logo";
 import * as Constants from '../Constants'
+import { ScrollContext } from "../../contexts/scroll";
 import { i18n } from "../../translate/i18n";
 import {
     X,
     List,
-    Code
 } from "react-bootstrap-icons";
 import { BsGithub, BsLinkedin, BsDiscord } from "react-icons/bs";
 import { toast } from "react-toastify";
 import './Menu.style.css'
 
 const Menu = () => {
+    const { scrollToSection, aboutRef, projectsRef, experienceRef, sayhelloRef } = useContext(ScrollContext)
     const [menu, setMenu] = useState(false);
     const menuIsOpen = () => setMenu(!menu)
     const iconSize = 40
@@ -26,6 +28,11 @@ const Menu = () => {
             scroll.style.overflowY = 'scroll'
         }
     }, [menu])
+
+    const closeAndScroll = (section) => {
+        menuIsOpen()
+        scrollToSection(section)
+    }
 
     function changeLanguage() {
         let language = localStorage.getItem(Constants.I18N_STORAGE_KEY)
@@ -47,23 +54,23 @@ const Menu = () => {
     return (
         <>
             {menu ? (
-                <div id="Menu">
+                <div className="menu">
                     <button id="closeMenu" onClick={menuIsOpen}>
                         <X size={iconSize} color={iconColor} />
                     </button>
 
-                    <div id="menuHeader">
-                        <Code size={70} />
-                        <p>João Vitor</p>
+                    <div id="menu-header">
+                        <Logo />
+                        <p>João Mororó</p>
                     </div>
-                    <div id="menuOptions">
-                        <a href="#About" onClick={menuIsOpen}>{i18n.t('menu.about_me')}</a>
-                        <a href="#experience" onClick={menuIsOpen}>{i18n.t('menu.experience')}</a>
-                        <a href="#projects" onClick={menuIsOpen}>{i18n.t('works.some_works')}</a>
-                        <a href="#sayHello" onClick={menuIsOpen}>{i18n.t('menu.contact_me')}</a>
+                    <div id="menu-options">
+                        <button onClick={() => closeAndScroll(aboutRef)}>{i18n.t('menu.about_me')}</button>
+                        <button onClick={() => closeAndScroll(experienceRef)}>{i18n.t('menu.experience')}</button>
+                        <button onClick={() => closeAndScroll(projectsRef)}>{i18n.t('works.some_works')}</button>
+                        <button onClick={() => closeAndScroll(sayhelloRef)}>{i18n.t('menu.contact_me')}</button>
                         <button onClick={changeLanguage}>{i18n.t('menu.translate')}</button>
                     </div>
-                    <div id="menuSocial">
+                    <div id="menu-socials">
                         <a href={Constants.LINKS.github} target="_blank" rel="noreferrer"><BsGithub size={socialIconSize} /></a>
                         <a href={Constants.LINKS.linkedin} target="_blank" rel="noreferrer"><BsLinkedin size={socialIconSize} /></a>
                         {/* <a href={Constants.LINKS.instagram} target="_blank" rel="noreferrer"><Instagram size={socialIconSize} /></a> */}
@@ -74,8 +81,7 @@ const Menu = () => {
                 <button id="openMenu" onClick={menuIsOpen}>
                     <List size={iconSize} color={iconColor} />
                 </button>
-            )
-            }
+            )}
         </>
     )
 }

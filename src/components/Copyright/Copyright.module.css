@@ -1,11 +1,4 @@
 .copyright {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.copyright p {
     color: var(--blue);
-    opacity: .8;
+    /* opacity: .8; */
 }

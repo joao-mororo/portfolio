@@ -7,6 +7,7 @@ import Skills from "./sections/Skills";
 import Experience from "./sections/Experience";
 import Projects from "./sections/Projects";
 import SayHello from "./sections/SayHello";
+import Footer from "./sections/Footer";
 import Copyright from './components/Copyright/Copyright'
 import ToTopButton from "./components/ToTopButton/ToTopButton";
 
@@ -36,7 +37,8 @@ function App() {
       <Experience />
       <Projects projects={projects} />
       <SayHello />
-      <Copyright>João Vitor</Copyright>
+      {/* <Copyright>João Vitor</Copyright> */}
+      <Footer />
     </>
   );
 }

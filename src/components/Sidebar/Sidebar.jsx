@@ -12,7 +12,7 @@ import './Sidebar.style.css'
 import { ScrollContext } from "../../contexts/scroll";
 
 export default function Sidebar() {
-    const { scrollToSection, about, experience, sayhello } = useContext(ScrollContext)
+    const { scrollToSection, aboutRef, experienceRef, sayhelloRef } = useContext(ScrollContext)
     const iconSize = 25
 
     function changeLanguage() {
@@ -34,10 +34,8 @@ export default function Sidebar() {
 
     return (
         <div className="sidebar">
-
-
             <button
-                onClick={() => scrollToSection(about)}
+                onClick={() => scrollToSection(aboutRef)}
             >
                 <PersonFill size={iconSize} />
             </button>
@@ -73,13 +71,13 @@ export default function Sidebar() {
             </button>
 
             <button
-                onClick={() => scrollToSection(experience)}
+                onClick={() => scrollToSection(experienceRef)}
             >
                 <BsGridFill size={iconSize} />
             </button>
 
             <button
-                onClick={() => scrollToSection(sayhello)}
+                onClick={() => scrollToSection(sayhelloRef)}
             >
                 <ChatDotsFill size={iconSize} />
             </button>

@@ -3,9 +3,10 @@ import { createContext, useRef } from "react";
 export const ScrollContext = createContext()
 
 export default function ScrollProvider({children}) {
-    const about = useRef(null)
-    const experience = useRef(null)
-    const sayhello = useRef(null)
+    const aboutRef = useRef(null)
+    const projectsRef = useRef(null)
+    const experienceRef = useRef(null)
+    const sayhelloRef = useRef(null)
 
     const scrollToSection = (elementRef) => {
         window.scrollTo({
@@ -16,7 +17,7 @@ export default function ScrollProvider({children}) {
     
     return (
         <ScrollContext.Provider
-            value={{scrollToSection, about, experience, sayhello}}
+            value={{scrollToSection, aboutRef, projectsRef, experienceRef, sayhelloRef}}
         >
             {children}
         </ScrollContext.Provider>

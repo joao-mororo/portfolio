@@ -43,10 +43,10 @@ const messages = {
                 empty: 'Preencha todos os campos'
             },
             about: {
-                about_me: 'Sobre mim',
-                p1: 'Sou um desenvolvedor Front-End localizado no Brasil. Tenho um interesse particular em sites responsivos e criação de experiências de usuário intuitivas e dinâmicas.',
-                p2: 'Pessoa bem organizada, solucionadora de problemas e com atenção aos detalhes. Fã de jogos e séries de TV. Uma pessoa reservada, mas que interaje bem com os colegas.',
-                p3: 'Interessado em todo espectro de frontend e um interesse crescente por backend.'
+                title: 'Sobre mim',
+                body: "Sou um desenvolvedor front-end altamente qualificado e experiente em projetos de desenvolvimento de sites. Tenho um interesse particular em sites responsivos e na criação de experiências de usuário intuitivas e dinâmicas. Pessoa bem organizada, solucionadora de problemas e com atenção aos detalhes. Sempre focado em oferecer soluções completas e eficazes para os projetos de meus clientes. Interessado em todo espectro de frontend e um interesse crescente por backend.",
+                downloadCV: 'Baixar CV',
+                downloadedCV: 'Baixado'
             },
             works: {
                 some_works: 'Alguns trabalhos',

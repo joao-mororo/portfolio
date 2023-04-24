@@ -16,7 +16,7 @@ export default function SayHello() {
     const [subject, setSubject] = useState("");
     const [message, setMessage] = useState("");
     const [sending, setSending] = useState(false);
-    const { sayhello } = useContext(ScrollContext)
+    const { sayhelloRef } = useContext(ScrollContext)
 
     function clear() {
         setName("");
@@ -63,7 +63,7 @@ export default function SayHello() {
     }
 
     return (
-        <section className="sayhello" ref={sayhello}>
+        <section className="sayhello" ref={sayhelloRef}>
             <Header>{i18n.t("home.say_hello")}</Header>
             <form autoComplete="off">
                 <input

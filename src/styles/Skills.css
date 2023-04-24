@@ -10,12 +10,13 @@
     justify-content: space-evenly;
     align-items: center;
     justify-content: flex-start;
-    width: 100%;
+    /* width: 100%; */
+    margin: 0 4.5rem;
 }
 
 @media (max-width: 600px) {
     .skills-grid {
-        width: 80%;
+        width: 95%;
         align-items: flex-start;
     }
 }
