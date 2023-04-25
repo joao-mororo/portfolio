@@ -22,7 +22,7 @@ const Footer = () => {
                 <a href={Constants.LINKS.linkedin} target="_blank" rel="noreferrer"><BsLinkedin /></a>
                 <button onClick={() => copyToClipboard(Constants.LINKS.discord)}><BsDiscord /></button>
             </div>
-            <Copyright>João Mororó</Copyright>
+            <Copyright color="#fff">João Mororó</Copyright>
         </footer>
     )
 }

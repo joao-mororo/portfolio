@@ -12,7 +12,7 @@ import { toast } from "react-toastify";
 import './Menu.style.css'
 
 const Menu = () => {
-    const { scrollToSection, aboutRef, projectsRef, experienceRef, sayhelloRef } = useContext(ScrollContext)
+    const { scrollToSection, aboutRef, skillsRef, projectsRef, experienceRef, sayhelloRef } = useContext(ScrollContext)
     const [menu, setMenu] = useState(false);
     const menuIsOpen = () => setMenu(!menu)
     const iconSize = 40
@@ -65,6 +65,7 @@ const Menu = () => {
                     </div>
                     <div id="menu-options">
                         <button onClick={() => closeAndScroll(aboutRef)}>{i18n.t('menu.about_me')}</button>
+                        <button onClick={() => closeAndScroll(skillsRef)}>{i18n.t('menu.skills')}</button>
                         <button onClick={() => closeAndScroll(experienceRef)}>{i18n.t('menu.experience')}</button>
                         <button onClick={() => closeAndScroll(projectsRef)}>{i18n.t('works.some_works')}</button>
                         <button onClick={() => closeAndScroll(sayhelloRef)}>{i18n.t('menu.contact_me')}</button>

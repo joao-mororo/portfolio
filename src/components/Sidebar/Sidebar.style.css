@@ -9,8 +9,8 @@
     width: 65px;
 }
 
-.sidebar a,
-.sidebar button {
+.sidebar-item {
+    position: relative;
     background-color: transparent;
     margin: 20px;
     padding: 0;
@@ -23,8 +23,7 @@
     transition: 0.2s;
 }
 
-.sidebar a:hover,
-.sidebar button:hover {
+.sidebar-item:hover {
     color: var(--blue);
     /* margin: 25px 0; */
     

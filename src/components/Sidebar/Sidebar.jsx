@@ -1,18 +1,14 @@
 import React, { useContext } from "react";
-import {
-    PersonFill,
-    ChatDotsFill,
-    Translate
-} from "react-bootstrap-icons";
-import { BsGridFill, BsLinkedin, BsGithub, BsDiscord } from 'react-icons/bs'
 import * as Constants from '../Constants'
+import { ScrollContext } from "../../contexts/scroll";
+import { BsPersonFill, BsTranslate, BsGridFill, BsLinkedin, BsGithub, BsDiscord, BsTools } from 'react-icons/bs'
+import { MdEmail } from 'react-icons/md'
 import { toast } from "react-toastify";
 import { i18n } from "../../translate/i18n";
 import './Sidebar.style.css'
-import { ScrollContext } from "../../contexts/scroll";
 
-export default function Sidebar() {
-    const { scrollToSection, aboutRef, experienceRef, sayhelloRef } = useContext(ScrollContext)
+const Sidebar = () => {
+    const { scrollToSection, aboutRef, skillsRef, experienceRef, sayhelloRef } = useContext(ScrollContext)
     const iconSize = 25
 
     function changeLanguage() {
@@ -35,12 +31,28 @@ export default function Sidebar() {
     return (
         <div className="sidebar">
             <button
+                className="sidebar-item"
                 onClick={() => scrollToSection(aboutRef)}
             >
-                <PersonFill size={iconSize} />
+                <BsPersonFill size={iconSize} />
+            </button>
+
+            <button
+                className="sidebar-item"
+                onClick={() => scrollToSection(skillsRef)}
+            >
+                <BsTools size={iconSize} />
+            </button>
+
+            <button
+                className="sidebar-item"
+                onClick={() => scrollToSection(experienceRef)}
+            >
+                <BsGridFill size={iconSize} />
             </button>
 
             <a
+                className="sidebar-item"
                 href={Constants.LINKS.github}
                 target="_blank"
                 rel="noreferrer"
@@ -49,6 +61,7 @@ export default function Sidebar() {
             </a>
 
             <a
+                className="sidebar-item"
                 href={Constants.LINKS.linkedin}
                 target="_blank"
                 rel="noreferrer"
@@ -56,37 +69,28 @@ export default function Sidebar() {
                 <BsLinkedin size={iconSize} />
             </a>
 
-            {/* <a 
-                href={Constants.LINKS.instagram}
-                target="_blank"
-                rel="noreferrer"
-            >
-                <BsInstagram size={iconSize} />
-            </a> */}
-
             <button
+                className="sidebar-item"
                 onClick={() => copyToClipboard(Constants.LINKS.discord)}
             >
                 <BsDiscord size={iconSize} />
             </button>
 
             <button
-                onClick={() => scrollToSection(experienceRef)}
-            >
-                <BsGridFill size={iconSize} />
-            </button>
-
-            <button
+                className="sidebar-item"
                 onClick={() => scrollToSection(sayhelloRef)}
             >
-                <ChatDotsFill size={iconSize} />
+                <MdEmail size={iconSize} />
             </button>
 
             <button
+                className="sidebar-item"
                 onClick={changeLanguage}
             >
-                <Translate size={iconSize} />
+                <BsTranslate size={iconSize} />
             </button>
         </div>
     )
 }
+
+export default Sidebar

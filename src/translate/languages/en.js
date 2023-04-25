@@ -3,6 +3,7 @@ const messages = {
         translations: {
             menu: {
                 about_me: 'About me',
+                skills: 'Skills',
                 experience: 'Experience',
                 contact_me: 'Contact me',
                 translate: 'Translate'
@@ -59,7 +60,8 @@ const messages = {
                 react: 'ReactJS, the lib responsible for the base of many applications. As one of the most powerful ways to program, ReactJS stands out as a great technology.',
                 mysql: 'In addition to every visual part, something to work behind the curtain. MySQL, one of the largest SQL databases on the market, with great storage and organization power.',
                 mongo: 'SQL is very powerful, but sometimes we need something more flexible. For this, MongoDB, a NoSQL database, is the perfect option for the task.',
-                node: 'Something could not be missing to unite the two sides of the thing. NodeJS, a powerful way to build an API that does all the communication on both sides of the application well.'
+                node: 'Something could not be missing to unite the two sides of the thing. NodeJS, a powerful way to build an API that does all the communication on both sides of the application well.',
+                git: "During the entire development process, or even after it is ready, many changes can happen. Therefore, Git is an indispensable technology for application control and versioning."
             }
         }
     }

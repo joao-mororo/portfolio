@@ -4,6 +4,7 @@ export const ScrollContext = createContext()
 
 export default function ScrollProvider({children}) {
     const aboutRef = useRef(null)
+    const skillsRef = useRef(null)
     const projectsRef = useRef(null)
     const experienceRef = useRef(null)
     const sayhelloRef = useRef(null)
@@ -17,7 +18,7 @@ export default function ScrollProvider({children}) {
     
     return (
         <ScrollContext.Provider
-            value={{scrollToSection, aboutRef, projectsRef, experienceRef, sayhelloRef}}
+            value={{scrollToSection, aboutRef, skillsRef, projectsRef, experienceRef, sayhelloRef}}
         >
             {children}
         </ScrollContext.Provider>
