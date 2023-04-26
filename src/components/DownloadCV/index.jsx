@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { HiDownload, HiCheck } from 'react-icons/hi'
-import style from './style.module.css'
+import style from './styles.module.css'
 import { i18n } from '../../translate/i18n'
 
 const DownloadCV = () => {

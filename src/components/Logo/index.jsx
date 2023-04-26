@@ -1,26 +1,26 @@
-import logo0 from '../../images/logos/logo0.png'
-import logo1 from '../../images/logos/logo1.png'
-import logo2 from '../../images/logos/logo2.png'
-import logo3 from '../../images/logos/logo3.png'
+import logoGB from '../../images/logos/logoGB.png'
+import logoBG from '../../images/logos/logoBG.png'
+import logoGG from '../../images/logos/logoGG.png'
+import logoBB from '../../images/logos/logoBB.png'
 import logoWW from '../../images/logos/logoWW.png'
 import logoWB from '../../images/logos/logoWB.png'
 import logoBW from '../../images/logos/logoBW.png'
 
 const Logo = ({variant}) => {
     if (variant === "GB") {
-        return <img className='logo' src={logo1} alt="" />
+        return <img className='logo' src={logoGB} alt="" />
     }
 
     if (variant === "BG") {
-        return <img className='logo' src={logo0} alt="" />
+        return <img className='logo' src={logoBG} alt="" />
     }
 
     if (variant === "GG") {
-        return <img className='logo' src={logo2} alt="" />
+        return <img className='logo' src={logoGG} alt="" />
     }
     
     if (variant === "BB") {
-        return <img className='logo' src={logo3} alt="" />
+        return <img className='logo' src={logoBB} alt="" />
     }
 
     if (variant === "WW") {
