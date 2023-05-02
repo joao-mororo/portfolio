@@ -1,19 +1,21 @@
 import React, { useContext } from "react";
-import { i18n } from "../translate/i18n";
 import Header from "../components/Header/Header";
-import '../styles/Projects.css'
+import projects from "../data/projects";
+import { i18n } from "../translate/i18n";
 import { ScrollContext } from "../contexts/scroll";
+import '../styles/Projects.css'
 
-const Projects = ({ projects }) => {
-    const {projectsRef} = useContext(ScrollContext)
+const Projects = () => {
+    const { projectsRef } = useContext(ScrollContext)
+    projects.length = window.innerWidth < 600 ? 3 : projects.length
 
     return (
         <section id="projects" ref={projectsRef}>
             <Header>{i18n.t('works.some_works')}</Header>
             <div id="projects-grid">
-                {projects.length === 0 ?
+                {projects.length === 0 ? (
                     <h1 style={{ color: '#0d6efd' }}>No projects found</h1>
-                    :
+                ) : (
                     projects.map((project, i) => {
                         return (
                             <div className="project-card" key={i}>
@@ -27,7 +29,7 @@ const Projects = ({ projects }) => {
                             </div>
                         )
                     })
-                }
+                )}
             </div>
         </section>
     )

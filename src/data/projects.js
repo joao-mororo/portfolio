@@ -1,7 +1,7 @@
 const projects = [
     {
         name: "Cardápio digital para restaurante",
-        image: require('../images/project-menu.png'),
+        image: require('../images/project-wallpapers/project-menu.png'),
         link: "https://github.com/joao-mororo/menu"
     },
     // {
@@ -11,13 +11,18 @@ const projects = [
     // },
     {
         name: "Página para consulta de filmes",
-        image: require('../images/project-movies.png'),
+        image: require('../images/project-wallpapers/project-movies.png'),
         link: "https://github.com/joao-mororo/movies_lib"
     },
     {
         name: "MyWorkbench",
-        image: require('../images/project-myworkbench.png'),
+        image: require('../images/project-wallpapers/project-myworkbench.png'),
         link: "https://github.com/joao-mororo/my-workbench"
+    },
+    {
+        name: "PokeNext",
+        image: require('../images/project-wallpapers/project-pokenext.png'),
+        link: "https://github.com/joao-mororo/pokenext"
     },
     // {
     //     name: "Novo hinário de músicas adventistas",
@@ -25,4 +30,5 @@ const projects = [
     //     link: "https://github.com/joao-mororo/hinario2022"
     // },
 ]
+
 export default projects

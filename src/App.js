@@ -8,10 +8,8 @@ import Experience from "./sections/Experience";
 import Projects from "./sections/Projects";
 import SayHello from "./sections/SayHello";
 import Footer from "./sections/Footer";
-import Copyright from './components/Copyright/Copyright'
 import ToTopButton from "./components/ToTopButton/ToTopButton";
 
-import projects from "./data/projects";
 import './styles/index.css'
 
 function App() {
@@ -35,9 +33,8 @@ function App() {
       <About />
       <Skills />
       <Experience />
-      <Projects projects={projects} />
+      <Projects />
       <SayHello />
-      {/* <Copyright>João Vitor</Copyright> */}
       <Footer />
     </>
   );
