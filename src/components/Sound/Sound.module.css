@@ -1,0 +1,26 @@
+.sound button {
+    background-color: transparent;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.3rem;
+    color: #fff;
+    font-size: 1.2rem;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    /* z-index: -1; */
+}
+
+.sound svg {
+    font-size: 1.9rem;
+}
+
+.sound .green {
+    color: var(--green);
+}
+
+.sound .red {
+    color: var(--red);
+}

@@ -8,6 +8,7 @@ import { i18n } from "../translate/i18n";
 import { ScrollContext } from "../contexts/scroll";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../styles/Home.css'
+import Sound from "../components/Sound";
 
 const Home = () => {
     const isDesktopOrLaptop = useMediaQuery({ query: '(min-width: 600px)' })
@@ -31,6 +32,7 @@ const Home = () => {
                 <footer>Front-End Developer | React.js</footer>
             </div>
             <ScrollAnimation />
+            {isDesktopOrLaptop && <Sound />}
         </section>
     )
 }

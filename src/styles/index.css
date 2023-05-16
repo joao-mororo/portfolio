@@ -2,7 +2,9 @@
   /* --blue: #0a58ca; */
   --blue: #0d6efd;
   --dark-blue: #0a58ca;
-  --gray: #1d1d1d
+  --gray: #1d1d1d;
+  --green: #198754;
+  --red: #dc3545;
 }
 
 * {
