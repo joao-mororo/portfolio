@@ -11,7 +11,7 @@
 - EmailJS
 
 ## Images
-![image](https://user-images.githubusercontent.com/110433639/234677880-e3926a28-b5dd-434d-bf8f-9751821b920c.png)
+![image](https://github.com/joao-mororo/portfolio/assets/110433639/4fc60da8-c12e-417d-a59c-de6bf00ef6a6)
 ![image](https://user-images.githubusercontent.com/110433639/234678644-40b4fe21-7566-4cc3-b507-be3a781b36fa.png)
 ![image](https://user-images.githubusercontent.com/110433639/234679170-8760b37c-98e5-4204-818a-595fbd50b597.png)
 ![image](https://user-images.githubusercontent.com/110433639/234679319-cd8678ff-ef3f-4190-8908-7bad755743bb.png)
