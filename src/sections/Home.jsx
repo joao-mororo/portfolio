@@ -2,13 +2,14 @@ import React, { useContext } from "react";
 import Menu from "../components/MobileMenu/Menu";
 import ScrollAnimation from "../components/ScrollAnimation";
 import Sidebar from "../components/Sidebar/Sidebar";
+import Sound from "../components/Sound";
+import JackEffect from "../components/JackEffect";
 import { useMediaQuery } from "react-responsive";
 import { Button } from 'react-bootstrap'
 import { i18n } from "../translate/i18n";
 import { ScrollContext } from "../contexts/scroll";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../styles/Home.css'
-import Sound from "../components/Sound";
 
 const Home = () => {
     const isDesktopOrLaptop = useMediaQuery({ query: '(min-width: 600px)' })
@@ -25,9 +26,9 @@ const Home = () => {
             }
             <div className="home-message">
                 <h1>
-                    <p>{i18n.t('home.hi')}</p>
-                    <p>{i18n.t('home.im')}</p>
-                    <p>{i18n.t('home.developer')}</p>
+                    <JackEffect>{i18n.t('home.hi')}</JackEffect>
+                    <JackEffect>{i18n.t('home.im')}</JackEffect>
+                    <JackEffect>{i18n.t('home.developer')}</JackEffect>
                 </h1>
                 <footer>Front-End Developer | React.js</footer>
             </div>
