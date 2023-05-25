@@ -1,11 +1,11 @@
 import React from 'react'
-import './style.css'
+import styles from './SkillCard.module.css'
 
 const SkillCard = ({ icon, text }) => {
     return (
-        <div className='skill-card'>
-                <i className='skill-icon'>{icon}</i>
-                <p className='skill-body'>{text}</p>
+        <div className={styles.card}>
+                <i className={styles.icon}>{icon}</i>
+                <p className={styles.body}>{text}</p>
         </div>
     )
 }

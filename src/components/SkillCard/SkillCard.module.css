@@ -1,4 +1,4 @@
-.skill-card {
+.card {
     width: 28.3333%;
     border-radius: 10px;
     margin: 2% 2.5%;
@@ -8,21 +8,21 @@
     height: 20%;
 }
 
-.skill-body {
+.body {
     min-height: 10rem;
 }
 
-.skill-icon {
+.icon {
     font-size: 4rem;
 }
 
 @media screen and (max-width: 600px) {
-    .skill-card {
+    .card {
         width: 45%;
         margin: 2% 2.5%;
     }
 
-    .skill-icon {
+    .icon {
         font-size: 2rem;
     }
 }

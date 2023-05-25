@@ -1,5 +1,5 @@
 import React from 'react'
-import Copyright from '../components/Copyright/Copyright'
+import Copyright from '../components/Copyright'
 import Logo from '../components/Logo'
 import * as Constants from '../components/Constants'
 import { BsGithub, BsLinkedin, BsDiscord } from "react-icons/bs";

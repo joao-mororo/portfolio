@@ -11,14 +11,14 @@
     margin: 10px;
 }
 
-.jack-effect {
+.home .jack-effect {
     font-family: 'Roboto', sans-serif;
     font-size: 200%;
     transition: .3s;
     color: #fff;
 }
 
-.jack-effect:hover {
+.home .jack-effect:hover {
     color: var(--blue);
 }
 
@@ -36,7 +36,7 @@
 }
 
 @media (max-width: 600px) {
-    .jack-effect {
+    .home .jack-effect {
         font-size: 135%;
     }
 }

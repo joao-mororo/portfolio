@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import '../styles/Skills.css'
 
 import SkillCard from "../components/SkillCard";
-import Header from '../components/Header/Header'
+import Header from '../components/Header'
 
 import { FaHtml5, FaCss3Alt, FaReact, FaNodeJs } from 'react-icons/fa'
 import { SiJavascript } from 'react-icons/si'

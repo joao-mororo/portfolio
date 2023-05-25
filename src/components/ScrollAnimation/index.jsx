@@ -1,10 +1,10 @@
 import React from 'react'
-import {IoIosArrowDown} from 'react-icons/io'
-import style from './style.module.css'
+import { IoIosArrowDown } from 'react-icons/io'
+import styles from './ScrollDown.module.css'
 
 const ScrollAnimation = () => {
     return (
-        <span className={style.scrollDown}><IoIosArrowDown /></span>
+        <span className={styles.icon}><IoIosArrowDown /></span>
     )
 }
 

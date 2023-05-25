@@ -1,5 +1,5 @@
 import React, { useContext, useState } from "react";
-import Header from "../components/Header/Header";
+import Header from "../components/Header";
 import { Button } from "react-bootstrap";
 import { i18n } from "../translate/i18n";
 import { IoSend } from "react-icons/io5";

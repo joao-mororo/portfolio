@@ -10,14 +10,19 @@ const projects = [
     //     link: "https://github.com/joao-mororo/inventory"
     // },
     {
-        name: "Página para consulta de filmes",
-        image: require('../images/project-wallpapers/project-movies.png'),
-        link: "https://github.com/joao-mororo/movies_lib"
-    },
-    {
         name: "MyWorkbench",
         image: require('../images/project-wallpapers/project-myworkbench.png'),
         link: "https://github.com/joao-mororo/my-workbench"
+    },
+    {
+        name: "Meu Time",
+        image: require('../images/project-wallpapers/project-meutime.png'),
+        link: "https://github.com/joao-mororo/meu_time"
+    },
+    {
+        name: "Página para consulta de filmes",
+        image: require('../images/project-wallpapers/project-movies.png'),
+        link: "https://github.com/joao-mororo/movies_lib"
     },
     {
         name: "PokeNext",
