@@ -1,7 +1,8 @@
 import React, { useContext } from "react";
 import * as Constants from '../Constants'
 import { ScrollContext } from "../../contexts/scroll";
-import { BsPersonFill, BsTranslate, BsGridFill, BsLinkedin, BsGithub, BsDiscord, BsTools } from 'react-icons/bs'
+import { ThemeContext } from "../../contexts/theme";
+import { BsPersonFill, BsTranslate, BsGridFill, BsLinkedin, BsGithub, BsDiscord, BsTools, BsSunFill, BsMoonFill } from 'react-icons/bs'
 import { MdEmail } from 'react-icons/md'
 import { toast } from "react-toastify";
 import { i18n } from "../../translate/i18n";
@@ -9,6 +10,7 @@ import './Sidebar.style.css'
 
 const Sidebar = () => {
     const { scrollToSection, aboutRef, skillsRef, experienceRef, sayhelloRef } = useContext(ScrollContext)
+    const { toggleTheme, theme } = useContext(ThemeContext) 
     const iconSize = 25
 
     function changeLanguage() {
@@ -81,6 +83,13 @@ const Sidebar = () => {
                 onClick={() => scrollToSection(sayhelloRef)}
             >
                 <MdEmail size={iconSize} />
+            </button>
+
+            <button
+                className="sidebar-item"
+                onClick={() => toggleTheme()}
+            >
+                {theme === 'dark' ? <BsMoonFill size={iconSize} /> : <BsSunFill size={iconSize} />}
             </button>
 
             <button

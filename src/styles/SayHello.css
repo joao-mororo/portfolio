@@ -43,6 +43,7 @@ form {
     color: white;
     caret-color: var(--blue);
     transition: .2s ease-in-out;
+    border-radius: 5px;
 }
 .formInput:focus {
     outline: none;

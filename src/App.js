@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useContext } from "react";
 import { ToastContainer } from "react-toastify";
+import { ThemeContext } from './contexts/theme'
 
 import Home from "./sections/Home";
 import About from "./sections/About";
@@ -13,8 +14,9 @@ import ToTopButton from "./components/ToTopButton/ToTopButton";
 import './styles/index.css'
 
 function App() {
+  const { scheme } = useContext(ThemeContext)
   return (
-    <>
+    <div style={{transition: '.3s', backgroundColor: scheme.bgColor}}>
       <ToastContainer
         position="bottom-right"
         autoClose={5000}
@@ -36,7 +38,7 @@ function App() {
       <Projects />
       <SayHello />
       <Footer />
-    </>
+    </div>
   );
 }
 

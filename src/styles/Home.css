@@ -11,32 +11,26 @@
     margin: 10px;
 }
 
-.home .jack-effect {
-    font-family: 'Roboto', sans-serif;
-    font-size: 200%;
-    transition: .3s;
-    color: #fff;
-}
-
-.home .jack-effect:hover {
-    color: var(--blue);
-}
-
 .home footer {
     color: var(--blue);
     letter-spacing: 4px;
 }
 
-.btn-sayhello {
+.right_menu {
     position: absolute;
     top: 0;
     right: 0;
     margin: 10px;
-    z-index: -1;
+    display: flex;
+    gap: 1rem;
+    font-size: 2rem;
 }
 
-@media (max-width: 600px) {
-    .home .jack-effect {
-        font-size: 135%;
-    }
+.btn-theme {
+    background-color: transparent;
+    border: none;
+    font-size: 1.8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
