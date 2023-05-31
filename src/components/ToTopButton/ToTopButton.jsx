@@ -1,5 +1,5 @@
 import React from 'react'
-import './ToTopButton.style.css'
+import './ToTopButton.styles.css'
 import { IoIosArrowUp } from 'react-icons/io'
 
 const ToTopButton = () => {

@@ -26,7 +26,8 @@
     font-size: 2rem;
 }
 
-.btn-theme {
+.btn-theme,
+.btn-translate {
     background-color: transparent;
     border: none;
     font-size: 1.8rem;

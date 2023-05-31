@@ -6,7 +6,6 @@ const messages = {
                 skills: 'Skills',
                 experience: 'Experience',
                 contact_me: 'Contact me',
-                translate: 'Translate'
             },
             home: {
                 hi: 'Hi,',

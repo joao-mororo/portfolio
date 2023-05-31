@@ -1,12 +1,19 @@
-import { createContext, useEffect, useState } from "react";
+import { createContext, useEffect, useLayoutEffect, useState } from "react";
 
 export const ThemeContext = createContext()
 
-export default function ThemeProvider({children}) {
-    const [theme, setTheme] = useState('dark')
+export default function ThemeProvider({ children }) {
+    const [theme, setTheme] = useState()
 
+    // Detect system theme
+    useLayoutEffect(() => {
+        const isDarkTheme = window.matchMedia('(prefers-color-scheme: dark)').matches
+        setTheme(isDarkTheme ? 'dark' : 'light')
+    }, [])
+
+    // Show theme changing
     useEffect(() => {
-        console.log(`${theme} theme set`);
+        if (theme) console.log(`${theme} theme set`);
     }, [theme])
 
     const toggleTheme = () => {
@@ -21,7 +28,7 @@ export default function ThemeProvider({children}) {
     const lightScheme = {
         bgColor: '#fff',
         bgColorSecondary: '#1d1d1d',
-        color: '#000'
+        color: '#1d1d1d'
     }
 
     const darkScheme = {
@@ -31,12 +38,12 @@ export default function ThemeProvider({children}) {
     }
 
     const scheme = theme === 'dark'
-        ? {...darkScheme}
-        : {...lightScheme}
+        ? { ...darkScheme }
+        : { ...lightScheme }
 
     return (
         <ThemeContext.Provider
-            value={{theme, toggleTheme, scheme}}
+            value={{ theme, toggleTheme, scheme }}
         >
             {children}
         </ThemeContext.Provider>

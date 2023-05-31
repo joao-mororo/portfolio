@@ -16,7 +16,7 @@ import './styles/index.css'
 function App() {
   const { scheme } = useContext(ThemeContext)
   return (
-    <div style={{transition: '.3s', backgroundColor: scheme.bgColor}}>
+    <div className="App" style={{transition: '.3s', backgroundColor: scheme.bgColor}}>
       <ToastContainer
         position="bottom-right"
         autoClose={5000}

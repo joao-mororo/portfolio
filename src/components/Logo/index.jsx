@@ -6,37 +6,37 @@ import logoWW from '../../images/logos/logoWW.png'
 import logoWB from '../../images/logos/logoWB.png'
 import logoBW from '../../images/logos/logoBW.png'
 
-const Logo = ({variant}) => {
+const Logo = ({ variant, className }) => {
     if (variant === "GB") {
-        return <img className='logo' src={logoGB} alt="" />
+        return <img className={className} src={logoGB} alt="" />
     }
 
     if (variant === "BG") {
-        return <img className='logo' src={logoBG} alt="" />
+        return <img className={className} src={logoBG} alt="" />
     }
 
     if (variant === "GG") {
-        return <img className='logo' src={logoGG} alt="" />
+        return <img className={className} src={logoGG} alt="" />
     }
-    
+
     if (variant === "BB") {
-        return <img className='logo' src={logoBB} alt="" />
+        return <img className={className} src={logoBB} alt="" />
     }
 
     if (variant === "WW") {
-        return <img className='logo' src={logoWW} alt="" />
+        return <img className={className} src={logoWW} alt="" />
     }
 
     if (variant === "WB") {
-        return <img className='logo' src={logoWB} alt="" />
+        return <img className={className} src={logoWB} alt="" />
     }
 
     if (variant === "BW") {
-        return <img className='logo' src={logoBW} alt="" />
+        return <img className={className} src={logoBW} alt="" />
     }
 
     // default
-    return <img className='logo' src={logoBW} alt="" />
+    return <img className={className} src={logoBW} alt="" />
 }
 
 export default Logo

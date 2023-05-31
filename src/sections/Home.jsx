@@ -1,13 +1,14 @@
 import React, { useContext } from "react";
-import Menu from "../components/MobileMenu/Menu";
+import Menu from "../components/MobileMenu";
 import ScrollAnimation from "../components/ScrollAnimation";
-import Sidebar from "../components/Sidebar/Sidebar";
+import Sidebar from "../components/Sidebar";
 import Sound from "../components/Sound";
 import JackEffect from "../components/JackEffect";
+import changeLanguage from "../functions/changeLanguage";
 import { ThemeContext } from "../contexts/theme";
 import { useMediaQuery } from "react-responsive";
 import { i18n } from "../translate/i18n";
-import { BsSunFill, BsMoonFill } from 'react-icons/bs'
+import { BsSunFill, BsMoonFill, BsTranslate } from 'react-icons/bs'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../styles/Home.css'
 
@@ -34,9 +35,15 @@ const Home = () => {
 
             <div className="right_menu">
                 {isTabletOrMobile && (
-                    <button className="btn-theme" style={{ color: scheme.color }} onClick={() => toggleTheme()}>
-                        {theme === 'dark' ? <BsMoonFill /> : <BsSunFill />}
-                    </button>
+                    <>
+                        <button className="btn-theme" style={{ color: scheme.color }} onClick={() => toggleTheme()}>
+                            {theme === 'dark' ? <BsMoonFill /> : <BsSunFill />}
+                        </button>
+
+                        <button className="btn-translate" style={{ color: scheme.color }} onClick={() => changeLanguage()}>
+                            <BsTranslate />
+                        </button>
+                    </>
                 )}
                 <Sound />
             </div>

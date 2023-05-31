@@ -1,5 +1,5 @@
-#openMenu,
-#closeMenu {
+.openMenu,
+.closeMenu {
     position: absolute;
     top: 0;
     left: 0;
@@ -25,12 +25,12 @@
     font-family:Arial, Helvetica, sans-serif;
 }
 
-.menu .logo {
+.logo {
     width: 5rem;
     margin: 1rem;
 }
 
-#menu-header {
+.header {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -40,15 +40,15 @@
     height: 25%;
 }
 
-#menu-options {
+.options {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     height: 45%;
 }
-#menu-options a,
-#menu-options button {
+.options a,
+.options button {
     background-color: transparent;
     border: none;
     text-decoration: none;
@@ -56,7 +56,7 @@
     padding: 10px 0;
 }
 
-#menu-socials {
+.socials {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -64,8 +64,8 @@
     height: 30%;
     gap: 1.5rem;
 }
-#menu-socials a,
-#menu-socials button {
+.socials a,
+.socials button {
     background-color: transparent;
     border: none;
     color: #fff;
