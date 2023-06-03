@@ -19,7 +19,10 @@ const Home = () => {
     const { theme, scheme, toggleTheme } = useContext(ThemeContext)
 
     return (
-        <section className="home">
+        <section 
+            className="home" 
+            style={{backgroundImage: `linear-gradient(to top, var(--blue) 0%, ${scheme.bgColor} ${isDesktopOrLaptop ? '20%' : '25%'})`}}
+        >
             {(isDesktopOrLaptop || (isTabletOrMobile && !isPortrait)) && <Sidebar />}
             {(isTabletOrMobile && isPortrait) && <Menu />}
             <div className="home-message">
