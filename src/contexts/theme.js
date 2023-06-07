@@ -26,7 +26,7 @@ export default function ThemeProvider({ children }) {
     }
 
     const lightScheme = {
-        bgColor: '#fff',
+        bgColor: '#c4c4c4',
         bgColorSecondary: '#1d1d1d',
         color: '#1d1d1d'
     }

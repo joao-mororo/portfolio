@@ -2,6 +2,8 @@ import React, { useState, useEffect, useContext } from "react";
 import * as Constants from '../Constants'
 import Logo from "../Logo";
 import copyToClipboard from "../../functions/copyToClipboard";
+import SocialButton from "./SocialButton";
+import OptionButton from "./OptionButton";
 import { ScrollContext } from "../../contexts/scroll";
 import { ThemeContext } from "../../contexts/theme";
 import { i18n } from "../../translate/i18n";
@@ -27,16 +29,6 @@ const Menu = () => {
         }
     }, [menu])
 
-    // remove home menu when menu is open
-    useEffect(() => {
-        const right_menu = document.getElementsByClassName('right_menu')[0]
-        if (menu) {
-            right_menu.style.display = 'none'
-        } else {
-            right_menu.style.display = 'flex'
-        }
-    }, [menu])
-
     const closeAndScroll = (section) => {
         menuIsOpen()
         scrollToSection(section)
@@ -55,16 +47,16 @@ const Menu = () => {
                         <p>João Mororó</p>
                     </div>
                     <div className={styles.options}>
-                        <button style={{color: scheme.color}} onClick={() => closeAndScroll(aboutRef)}>{i18n.t('menu.about_me')}</button>
-                        <button style={{color: scheme.color}} onClick={() => closeAndScroll(skillsRef)}>{i18n.t('menu.skills')}</button>
-                        <button style={{color: scheme.color}} onClick={() => closeAndScroll(experienceRef)}>{i18n.t('menu.experience')}</button>
-                        <button style={{color: scheme.color}} onClick={() => closeAndScroll(projectsRef)}>{i18n.t('works.some_works')}</button>
-                        <button style={{color: scheme.color}} onClick={() => closeAndScroll(sayhelloRef)}>{i18n.t('menu.contact_me')}</button>
+                        <OptionButton onClick={() => closeAndScroll(aboutRef)}>{i18n.t('menu.about_me')}</OptionButton>
+                        <OptionButton onClick={() => closeAndScroll(skillsRef)}>{i18n.t('menu.skills')}</OptionButton>
+                        <OptionButton onClick={() => closeAndScroll(experienceRef)}>{i18n.t('menu.experience')}</OptionButton>
+                        <OptionButton onClick={() => closeAndScroll(projectsRef)}>{i18n.t('works.some_works')}</OptionButton>
+                        <OptionButton onClick={() => closeAndScroll(sayhelloRef)}>{i18n.t('menu.contact_me')}</OptionButton>
                     </div>
                     <div className={styles.socials}>
-                        <a style={{color: scheme.color}} href={Constants.LINKS.github} target="_blank" rel="noreferrer"><BsGithub size={socialIconSize} /></a>
-                        <a style={{color: scheme.color}} href={Constants.LINKS.linkedin} target="_blank" rel="noreferrer"><BsLinkedin size={socialIconSize} /></a>
-                        <button style={{color: scheme.color}} onClick={() => copyToClipboard(Constants.LINKS.discord)}><BsDiscord size={socialIconSize} /></button>
+                        <SocialButton as="a" href={Constants.LINKS.github}><BsGithub size={socialIconSize} /></SocialButton>
+                        <SocialButton as="a" href={Constants.LINKS.linkedin}><BsLinkedin size={socialIconSize} /></SocialButton>
+                        <SocialButton as="button" onClick={() => copyToClipboard(Constants.LINKS.discord)}><BsDiscord size={socialIconSize} /></SocialButton>
                     </div>
                 </div>
             ) : (
