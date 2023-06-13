@@ -47,7 +47,7 @@ export default function SayHello() {
             templateParams,
             Constants.EMAILJS.publicKey
         ).then(() => {
-            toast.info(
+            toast.success(
                 i18n.t("say_hello.toast_success"),
                 Constants.DEFAULT_TOAST_CONFIG
             );
