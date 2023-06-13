@@ -21,7 +21,7 @@ const Home = () => {
     return (
         <section 
             className="home" 
-            style={{backgroundImage: `linear-gradient(to top, var(--blue) 0%, ${scheme.bgColor} ${isDesktopOrLaptop ? '20%' : '25%'})`}}
+            style={{backgroundImage: `linear-gradient(to top, var(--blue) -20%, transparent ${isDesktopOrLaptop ? '20%' : '25%'})`}}
         >
             {(isDesktopOrLaptop || (isTabletOrMobile && !isPortrait)) && <Sidebar />}
             {(isTabletOrMobile && isPortrait) && <Menu />}
