@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useContext } from "react";
-import * as Constants from '../Constants'
+import * as Constants from '../../data/Constants'
 import Logo from "../Logo";
 import copyToClipboard from "../../functions/copyToClipboard";
 import SocialButton from "./SocialButton";

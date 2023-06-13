@@ -1,4 +1,4 @@
-import { I18N_STORAGE_KEY } from "../components/Constants"
+import { I18N_STORAGE_KEY } from "../data/Constants"
 
 function changeLanguage() {
     let language = localStorage.getItem(I18N_STORAGE_KEY)

@@ -1,6 +1,6 @@
 import i18n from 'i18next'
 import LanguageDetector from 'i18next-browser-languagedetector'
-import * as Constants from '../components/Constants'
+import * as Constants from '../data/Constants'
 
 import { messages } from './languages'
 

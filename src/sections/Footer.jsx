@@ -1,5 +1,5 @@
 import React, { useContext } from 'react'
-import * as Constants from '../components/Constants'
+import * as Constants from '../data/Constants'
 import Copyright from '../components/Copyright'
 import Logo from '../components/Logo'
 import copyToClipboard from '../functions/copyToClipboard'

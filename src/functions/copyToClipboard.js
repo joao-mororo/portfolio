@@ -1,5 +1,5 @@
 import { toast } from "react-toastify";
-import { DEFAULT_TOAST_CONFIG } from "../components/Constants";
+import { DEFAULT_TOAST_CONFIG } from "../data/Constants";
 import { i18n } from "../translate/i18n";
 
 const copyToClipboard = (text) => {

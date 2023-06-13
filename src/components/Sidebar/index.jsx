@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import * as Constants from '../Constants'
+import * as Constants from '../../data/Constants'
 import changeLanguage from "../../functions/changeLanguage";
 import copyToClipboard from "../../functions/copyToClipboard";
 import { ScrollContext } from "../../contexts/scroll";

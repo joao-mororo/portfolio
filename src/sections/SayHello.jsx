@@ -6,7 +6,7 @@ import { IoSend } from "react-icons/io5";
 import { toast } from "react-toastify";
 import { ScrollContext } from "../contexts/scroll";
 import emailjs from "@emailjs/browser";
-import * as Constants from "../components/Constants";
+import * as Constants from "../data/Constants";
 import "react-toastify/dist/ReactToastify.css";
 import "../styles/SayHello.css";
 

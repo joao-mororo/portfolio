@@ -2,7 +2,7 @@ export const LINKS = {
     linkedin: 'https://www.linkedin.com/in/jo%C3%A3o-vitor-moror%C3%B3-9639b321b',
     instagram: 'https://www.instagram.com/joaovmororo_/',
     github: 'https://github.com/joao-mororo',
-    discord: 'Sleepy#7820'
+    discord: 'sleepingbtw'
 }
 
 export const I18N_STORAGE_KEY = 'i18nextLng'
