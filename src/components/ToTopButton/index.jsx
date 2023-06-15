@@ -1,8 +1,9 @@
 import React from 'react'
-import './ToTopButton.styles.css'
 import { IoIosArrowUp } from 'react-icons/io'
+import styles from './ToTopButton.module.css'
 
 const ToTopButton = () => {
+
     function toTop() {
         document.body.scrollTop = 0; // For Safari
         document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
@@ -20,7 +21,12 @@ const ToTopButton = () => {
     window.onscroll = function () { scrollFunction() };
 
     return (
-        <button className="toTopButton" onClick={toTop} title="Go to top"><IoIosArrowUp /></button>
+        <button 
+            className={`${styles.button} toTopButton`} 
+            onClick={toTop} 
+        >
+            <IoIosArrowUp />
+        </button>
     )
 }
 

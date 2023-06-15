@@ -9,7 +9,7 @@ import Experience from "./sections/Experience";
 import Projects from "./sections/Projects";
 import SayHello from "./sections/SayHello";
 import Footer from "./sections/Footer";
-import ToTopButton from "./components/ToTopButton/ToTopButton";
+import ToTopButton from "./components/ToTopButton";
 
 import './styles/index.css'
 
