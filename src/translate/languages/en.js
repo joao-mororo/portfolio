@@ -56,11 +56,13 @@ const messages = {
                 header: 'Skills',
                 htmlcss: 'HTML and CSS, the basics for creating a web page. Of course, having a solid foundation is trivial for any development..',
                 javascript: "JavaScript, the programming language that makes things happen. In addition to a beautiful page, it's always good to have an interactive and dynamic page.",
-                react: 'ReactJS, the lib responsible for the base of many applications. As one of the most powerful ways to program, ReactJS stands out as a great technology.',
+                react: 'React.JS, the lib responsible for the base of many applications. As one of the most powerful ways to program, ReactJS stands out as a great technology.',
                 mysql: 'In addition to every visual part, something to work behind the curtain. MySQL, one of the largest SQL databases on the market, with great storage and organization power.',
                 mongo: 'SQL is very powerful, but sometimes we need something more flexible. For this, MongoDB, a NoSQL database, is the perfect option for the task.',
                 node: 'Something could not be missing to unite the two sides of the thing. NodeJS, a powerful way to build an API that does all the communication on both sides of the application well.',
-                git: "During the entire development process, or even after it is ready, many changes can happen. Therefore, Git is an indispensable technology for application control and versioning."
+                git: "During the entire development process, or even after it is ready, many changes can happen. Therefore, Git is an indispensable technology for application control and versioning.",
+                docker: "Through Docker we can create containers to encapsulate a system, facilitating the handling of a complex system and enabling better teamwork.",
+                next: "Next.JS is considered by many to be the best framework for Front-End development. A deserved fame, taking into account its optimization and compatibility capacity."
             }
         }
     }

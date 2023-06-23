@@ -4,13 +4,14 @@ import '../styles/Skills.css'
 import SkillCard from "../components/SkillCard";
 import Header from '../components/Header'
 
-import { FaHtml5, FaCss3Alt, FaReact, FaNodeJs } from 'react-icons/fa'
-import { SiJavascript } from 'react-icons/si'
+import { FaHtml5, FaCss3Alt, FaReact, FaNodeJs, FaDocker } from 'react-icons/fa'
+import { SiJavascript, SiNextdotjs } from 'react-icons/si'
 import { GrMysql } from 'react-icons/gr'
 import { BsGit } from 'react-icons/bs'
 
 import { i18n } from "../translate/i18n";
 import { ScrollContext } from "../contexts/scroll";
+import Carousel from "../components/Carousel";
 
 const HtmlCssLogo = () => {
     const htmlStyle = {
@@ -39,14 +40,18 @@ const Skills = () => {
     return (
         <section className="skills" ref={skillsRef}>
             <Header>{i18n.t('skills.header')}</Header>
-            <div className="skills-grid">
+            <Carousel>
                 <SkillCard icon={<HtmlCssLogo />} text={i18n.t('skills.htmlcss')} />
                 <SkillCard icon={<SiJavascript />} text={i18n.t('skills.javascript')} />
                 <SkillCard icon={<FaReact />} text={i18n.t('skills.react')} />
+                <SkillCard icon={<SiNextdotjs />} text={i18n.t('skills.next')} />
+            </Carousel>
+            <Carousel>
                 <SkillCard icon={<GrMysql />} text={i18n.t('skills.mysql')} />
                 <SkillCard icon={<FaNodeJs />} text={i18n.t('skills.node')} />
                 <SkillCard icon={<BsGit />} text={i18n.t('skills.git')} />
-            </div>
+                <SkillCard icon={<FaDocker />} text={i18n.t('skills.docker')} />
+            </Carousel>
         </section>
     )
 }
