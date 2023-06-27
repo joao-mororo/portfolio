@@ -17,7 +17,7 @@ export default function Experience() {
     const { experienceRef } = useContext(ScrollContext)
     
     return (
-        <div className="experience" ref={experienceRef}>
+        <div className="experience section" ref={experienceRef}>
             <div className="academic-formation">
                 <Header>{i18n.t('experience.academic_formation_header')}</Header>
                 <details>

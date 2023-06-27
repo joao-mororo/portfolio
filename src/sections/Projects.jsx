@@ -10,9 +10,9 @@ const Projects = () => {
     projects.length = window.innerWidth < 600 ? 3 : projects.length
 
     return (
-        <section id="projects" ref={projectsRef}>
+        <section className="projects section" ref={projectsRef}>
             <Header>{i18n.t('works.some_works')}</Header>
-            <div id="projects-grid">
+            <div className="projects-grid">
                 {projects.length === 0 ? (
                     <h1 style={{ color: '#0d6efd' }}>No projects found</h1>
                 ) : (

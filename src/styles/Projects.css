@@ -2,7 +2,7 @@
     --transition-duration: .45s;
 }
 
-#projects {
+.projects {
     display: flex;
     flex-direction: column;
     color: var(--blue);
@@ -14,7 +14,7 @@
     font-family: 'Roboto';
 } */
 
-#projects-grid {
+.projects-grid {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -85,7 +85,7 @@
 
 
 @media (max-width: 600px) {
-    #projects-grid {
+    .projects-grid {
         flex-direction: column;
         margin: 0;
     }

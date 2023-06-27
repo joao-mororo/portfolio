@@ -24,6 +24,16 @@ body {
   user-select: none;
 }
 
+.section {
+  margin: 8% 0;
+}
+
+@media screen and (max-width: 600px) {
+  .section {
+    margin: 20% 0;
+  }
+}
+
 /* Scroll bar */
 ::-webkit-scrollbar {
   width: 10px;

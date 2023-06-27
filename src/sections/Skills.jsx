@@ -1,8 +1,9 @@
 import React, { useContext } from "react";
 import '../styles/Skills.css'
 
-import SkillCard from "../components/SkillCard";
 import Header from '../components/Header'
+import SkillCard from "../components/SkillCard";
+import Carousel from "../components/Carousel";
 
 import { FaHtml5, FaCss3Alt, FaReact, FaNodeJs, FaDocker } from 'react-icons/fa'
 import { SiJavascript, SiNextdotjs } from 'react-icons/si'
@@ -11,7 +12,6 @@ import { BsGit } from 'react-icons/bs'
 
 import { i18n } from "../translate/i18n";
 import { ScrollContext } from "../contexts/scroll";
-import Carousel from "../components/Carousel";
 
 const HtmlCssLogo = () => {
     const htmlStyle = {
@@ -34,18 +34,21 @@ const HtmlCssLogo = () => {
 }
 
 const Skills = () => {
-
     const { skillsRef } = useContext(ScrollContext)
 
     return (
-        <section className="skills" ref={skillsRef}>
+        <section className="skills section" ref={skillsRef}>
             <Header>{i18n.t('skills.header')}</Header>
+
+            {/* frontend skills */}
             <Carousel>
                 <SkillCard icon={<HtmlCssLogo />} text={i18n.t('skills.htmlcss')} />
                 <SkillCard icon={<SiJavascript />} text={i18n.t('skills.javascript')} />
                 <SkillCard icon={<FaReact />} text={i18n.t('skills.react')} />
                 <SkillCard icon={<SiNextdotjs />} text={i18n.t('skills.next')} />
             </Carousel>
+
+            {/* backend skills */}
             <Carousel>
                 <SkillCard icon={<GrMysql />} text={i18n.t('skills.mysql')} />
                 <SkillCard icon={<FaNodeJs />} text={i18n.t('skills.node')} />

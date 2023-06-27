@@ -63,7 +63,7 @@ export default function SayHello() {
     }
 
     return (
-        <section className="sayhello" ref={sayhelloRef}>
+        <section className="sayhello section" ref={sayhelloRef}>
             <Header>{i18n.t("home.say_hello")}</Header>
             <form autoComplete="off">
                 <input
