@@ -1,4 +1,4 @@
-.about {
+.section {
     width: 100%;
     padding: 15px;
     background-color: var(--blue);
@@ -21,7 +21,7 @@
     margin: 0 30px;
 }
 
-.about .header {
+.header {
     color: var(--gray);
     font-size: 4rem;
     font-family: 'Roboto', sans-serif;
@@ -48,15 +48,15 @@
 }
 
 .img-wave {
-  /* dont select */
-  -moz-user-select: none;
-  -webkit-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
+    /* dont select */
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 @media (max-width: 600px) {
-    .about {
+    .section {
         flex-direction: column;
     }
 
@@ -75,7 +75,7 @@
     }
 
     .avatar,
-    .avatar > img {
+    .avatar>img {
         width: 100%;
     }
 

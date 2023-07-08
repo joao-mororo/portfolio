@@ -12,8 +12,6 @@ import Footer from "./sections/Footer";
 import ToTopButton from "./components/ToTopButton";
 
 import './styles/index.css'
-import Carousel from "./components/Carousel";
-import projects from "./data/projects";
 
 function App() {
   const { scheme } = useContext(ThemeContext)
@@ -39,7 +37,6 @@ function App() {
       <Experience />
       <Projects />
       <SayHello />
-      {/* <Carousel /> */}
       <Footer />
     </div>
   );

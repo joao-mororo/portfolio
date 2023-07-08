@@ -1,4 +1,4 @@
-.footer {
+.section {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -7,24 +7,24 @@
     padding: 1rem 0;
 }
 
-.footer-header {
+/* .footer-header {
     font-size: 4rem;
     color: #fff;
-}
+} */
 
-.footer .logo {
+.logo {
     width: 6rem;
     margin: 1rem;
 }
 
-.footer-socials {
+.socials {
     display: flex;
     gap: 1rem;
     font-size: 1.5rem;
     margin-bottom: 2rem;
 }
 
-.footer a, .footer button {
+.socials a, .socials button {
     background-color: transparent;
     color: #fff;
     padding: 0;
@@ -33,6 +33,6 @@
     transition: .2s;
 }
 
-.footer a:hover, .footer button:hover {
+.socials a:hover, .socials button:hover {
     color: var(--blue);
 }

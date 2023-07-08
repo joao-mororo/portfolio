@@ -1,4 +1,5 @@
 import React from 'react'
+import LordIcon from '../LordIcon';
 import { IoIosArrowUp } from 'react-icons/io'
 import styles from './ToTopButton.module.css'
 
@@ -26,6 +27,13 @@ const ToTopButton = () => {
             onClick={toTop} 
         >
             <IoIosArrowUp />
+            {/* <LordIcon
+                src='https://cdn.lordicon.com/xdakhdsq.json'
+                trigger='hover'
+                colors={{primary: "#0d6efd"}}
+                state="hover-2"
+                size="4rem"
+            /> */}
         </button>
     )
 }

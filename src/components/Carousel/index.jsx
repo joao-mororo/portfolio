@@ -1,7 +1,8 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import Slider from 'react-slick'
 import { IoIosArrowBack, IoIosArrowForward } from 'react-icons/io'
 import { useMediaQuery } from 'react-responsive'
+import { ThemeContext } from '../../contexts/theme'
 import styles from './Carousel.module.css'
 import './SlickCarousel.css'
 
@@ -15,10 +16,11 @@ const images = [
 const Carousel = ({ children }) => {
     const [imageIndex, setImageIndex] = useState(0);
     const isTabletOrMobile = useMediaQuery({ query: '(max-width: 600px)' })
+    const { scheme } = useContext(ThemeContext)
 
     const NextArrow = ({ onClick }) => {
         return (
-            <button className={`${styles.arrow} ${styles.next}`} onClick={onClick}>
+            <button style={{color: scheme.color}} className={`${styles.arrow} ${styles.next}`} onClick={onClick}>
                 <IoIosArrowForward />
             </button>
         );
@@ -26,7 +28,7 @@ const Carousel = ({ children }) => {
 
     const PrevArrow = ({ onClick }) => {
         return (
-            <button className={`${styles.arrow} ${styles.prev}`} onClick={onClick}>
+            <button style={{color: scheme.color}} className={`${styles.arrow} ${styles.prev}`} onClick={onClick}>
                 <IoIosArrowBack />
             </button>
         );

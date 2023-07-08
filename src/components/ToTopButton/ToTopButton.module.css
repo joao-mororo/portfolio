@@ -8,8 +8,8 @@
     z-index: 99; /* Make sure it does not overlap */
     border: none; /* Remove borders */
     outline: none; /* Remove outline */
-    background-color: var(--blue); /* Set a background color */
-    color: #fff; /* Text color */
+    background-color: var(--blue);
+    color: #fff; 
     cursor: pointer; /* Add a mouse pointer on hover */
     height: 3rem;
     width: 3rem;
@@ -18,7 +18,7 @@
 }
   
 .button:hover {
-    background-color: var(--dark-blue); /* Add a dark-grey background on hover */
+    background-color: var(--dark-blue); 
 }
 
 @media screen and (max-width: 600px) {
