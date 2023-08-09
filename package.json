@@ -11,8 +11,6 @@
     "framer-motion": "^10.12.12",
     "i18next": "^21.10.0",
     "i18next-browser-languagedetector": "^6.1.6",
-    "lord-icon-element": "^4.1.1",
-    "lottie-web": "^5.12.2",
     "react": "^18.2.0",
     "react-bootstrap": "^2.5.0",
     "react-bootstrap-icons": "^1.9.1",

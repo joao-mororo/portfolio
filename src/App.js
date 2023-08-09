@@ -5,7 +5,7 @@ import { ThemeContext } from './contexts/theme'
 import Home from "./sections/Home";
 import About from "./sections/About";
 import Skills from "./sections/Skills";
-import Experience from "./sections/Experience";
+import Experiences from "./sections/Experiences";
 import Projects from "./sections/Projects";
 import SayHello from "./sections/SayHello";
 import Footer from "./sections/Footer";
@@ -16,7 +16,7 @@ import './styles/index.css'
 function App() {
   const { scheme } = useContext(ThemeContext)
   return (
-    <div className="App" style={{transition: '.3s', backgroundColor: scheme.bgColor}}>
+    <div className="App" style={{ transition: '.3s', backgroundColor: scheme.bgColor }}>
       <ToastContainer
         position="bottom-right"
         autoClose={5000}
@@ -34,7 +34,7 @@ function App() {
       <Home />
       <About />
       <Skills />
-      <Experience />
+      <Experiences />
       <Projects />
       <SayHello />
       <Footer />

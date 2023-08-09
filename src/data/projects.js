@@ -20,7 +20,12 @@ const projects = [
         link: "https://github.com/joao-mororo/meu_time"
     },
     {
-        name: "Página para consulta de filmes",
+        name: "AEG Media - Proteção Veicular",
+        image: require('../images/project-wallpapers/project-aegprotecao.png'),
+        link: "https://protecaolp.aegmedia.com.br/"
+    },
+    {
+        name: "MoviesLib",
         image: require('../images/project-wallpapers/project-movies.png'),
         link: "https://github.com/joao-mororo/movies_lib"
     },

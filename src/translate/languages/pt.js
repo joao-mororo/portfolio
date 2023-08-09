@@ -29,7 +29,9 @@ const messages = {
                 profissional_experience_header: 'Experiência profissional',
                 profissional_experience: {
                     moura_title: 'Baterias Moura | 2021 - 2022',
-                    moura_description: 'Responsável pelo desenvolvimento de projetos de automação, com foco no desenvolvimento de softwares, além de auxiliar a equipe no desenvolvimento de hardwares.'
+                    moura_description: 'Responsável pelo desenvolvimento de projetos de automação, com foco no desenvolvimento de softwares, além de auxiliar a equipe no desenvolvimento de hardwares.',
+                    aeg_title: "AEG Media | Desde 2023",
+                    aeg_description: "Como Desenvolvedor Web, responsável pela criação de Landing Pages e site para as empresas associadas à AEG Media.",
                 }
             },
             say_hello: {
@@ -52,7 +54,7 @@ const messages = {
                 some_works: 'Alguns trabalhos',
                 view_project: 'Ver projeto'
             },
-            skills : {
+            skills: {
                 header: 'Habilidades',
                 htmlcss: 'HTML e CSS, o básico para a criação de uma página web. Certamente, ter a base sólida é trivial para qualquer desenvolvimento.',
                 javascript: 'JavaScript, a linguagem de programação que faz as coisas acontecerem. Além de uma página bonita, é sempre bom ter uma página interativa e dinâmica.',
@@ -60,9 +62,10 @@ const messages = {
                 mysql: 'Além de toda parte visual, algo para funcionar atrás da cortina. MySQL, um dos maiores bancos de dados SQL do mercado, com um grande poder de armazenamento e organização.',
                 mongo: 'SQL é muito poderoso, mas algumas vezes precisamos de algo mais flexível. Para isso, MongoDB, um banco de dados NoSQL, é a opção perfeita para a tarefa.',
                 node: 'Não poderia faltar algo para unir os dois lados da coisa. NodeJS, uma poderosa forma de construir uma API que faça bem toda a comunicação dos dois lados da aplicação.',
-                git : 'Durante todo o processo de desenvolvimento, ou mesmo depois de pronto, muitas mudanças podem acontecer. Por isso, Git é uma tecnologia indispensável para controle e versionamento da aplicação.',
+                git: 'Durante todo o processo de desenvolvimento, ou mesmo depois de pronto, muitas mudanças podem acontecer. Por isso, Git é uma tecnologia indispensável para controle e versionamento da aplicação.',
                 docker: "Atravéz do Docker podemos criar containers para encapsular um sistema, facilitando o manuseamento de um sistema complexo e possibilitando um melhor trabalho em equipe.",
-                next: "Next.JS é considerado por muitos o melhor framework para desenvolvimento Front-End. Uma fama merecida, levando em conta sua capacidade de otimização e compatibilidade."
+                next: "Next.JS é considerado por muitos o melhor framework para desenvolvimento Front-End. Uma fama merecida, levando em conta sua capacidade de otimização e compatibilidade.",
+                wordpress: "WordPress, uma ferramenta muito útil para criação de páginas mais simples, as famosas Landing Pages. Junto ao Elementor, fazem um trabalho incrível.",
             }
         }
     }
