@@ -34,6 +34,22 @@ const messages = {
                     aeg_description: "Como Desenvolvedor Web, responsável pela criação de Landing Pages e site para as empresas associadas à AEG Media.",
                 }
             },
+            experiences: {
+                academic_formation: [
+                    {
+                        title: 'Técnico em Desenvolvimento de Sistemas | 2018 - 2020',
+                        description: 'Curso técnico realizado na ETE Edson Mororó Moura de Belo Jardim, em paralelo ao ensino médio.'
+                    },
+                    {
+                        title: 'Técnico em Desenvolvimento de Sistemas | 2018 - 2020',
+                        description: 'Curso técnico realizado na ETE Edson Mororó Moura de Belo Jardim, em paralelo ao ensino médio.'
+                    },
+                    {
+                        title: 'Técnico em Desenvolvimento de Sistemas | 2018 - 2020',
+                        description: 'Curso técnico realizado na ETE Edson Mororó Moura de Belo Jardim, em paralelo ao ensino médio.'
+                    }
+                ]
+            },
             say_hello: {
                 send: 'Enviar',
                 sending: 'Enviando...',

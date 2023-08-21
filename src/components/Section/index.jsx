@@ -1,6 +1,15 @@
-import React from 'react'
+import React from "react";
 
-const Section = ({ children, className, margin, padding='5rem', flexDirection='column', justifyContent='center', alignItems='center' }) => {
+const Section = ({
+    children,
+    className,
+    ref,
+    margin,
+    padding = "4rem 5rem",
+    flexDirection = "column",
+    justifyContent = "center",
+    alignItems = "center",
+}) => {
     const style = {
         margin,
         padding,
@@ -8,15 +17,15 @@ const Section = ({ children, className, margin, padding='5rem', flexDirection='c
         flexDirection,
         justifyContent,
         alignItems,
-        width: '100%',
-        height: '100vh'
-    }
+        width: "100%",
+        height: "100vh",
+    };
 
     return (
-        <section style={style} className={className}>
+        <section style={style} className={className} ref={ref}>
             {children}
         </section>
-    )
-}
+    );
+};
 
-export default Section
+export default Section;

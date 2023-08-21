@@ -1,4 +1,17 @@
+import captureScreenshot from '../functions/captureScreenshot'
+
 const projects = [
+    {
+        name: "AEG Media - Assessoria de Marketing",
+        image: require('../images/project-wallpapers/project-aegassessoria.png'),
+        link: "https://aegmediamkt.com/assessoria/"
+    },
+    {
+        name: "AEG Media - Proteção Veicular",
+        image: require('../images/project-wallpapers/project-aegprotecao.png'),
+        // image: captureScreenshot("https://aegmediamkt.com/protecaoveicular"),
+        link: "https://aegmediamkt.com/protecaoveicular"
+    },
     {
         name: "Cardápio digital para restaurante",
         image: require('../images/project-wallpapers/project-menu.png'),
@@ -19,16 +32,11 @@ const projects = [
         image: require('../images/project-wallpapers/project-meutime.png'),
         link: "https://github.com/joao-mororo/meu_time"
     },
-    {
-        name: "AEG Media - Proteção Veicular",
-        image: require('../images/project-wallpapers/project-aegprotecao.png'),
-        link: "https://protecaolp.aegmedia.com.br/"
-    },
-    {
-        name: "MoviesLib",
-        image: require('../images/project-wallpapers/project-movies.png'),
-        link: "https://github.com/joao-mororo/movies_lib"
-    },
+    // {
+    //     name: "MoviesLib",
+    //     image: require('../images/project-wallpapers/project-movies.png'),
+    //     link: "https://github.com/joao-mororo/movies_lib"
+    // },
     {
         name: "PokeNext",
         image: require('../images/project-wallpapers/project-pokenext.png'),

@@ -1,21 +1,15 @@
-.experience {
+.section {
     width: 100%;
     display: flex;
     margin: 5% 0;
 }
 
-.experience h2 {
-    color: #0d6efd;
-    text-align: center;
-    /* font-family: 'Roboto', sans-serif; */
-}
-
-.experience details {
+.experience {
     margin: 5px 0;
     transition-duration: 0.3s;
 }
 
-.experience details[open] {
+.experience[open] {
     margin: 10px 0;
 }
 
@@ -36,21 +30,21 @@
     border-radius: 5px;
 }
 
-.academic-formation,
-.profissional-experience {
+.academic_formation,
+.profissional_experience {
     width: 50%;
     margin: 0 5%;
 }
 
 @media (max-width: 600px) {
-    .experience {
+    .section {
         flex-direction: column;
         align-items: center;
         margin: 20% 0;
     }
 
-    .academic-formation,
-    .profissional-experience {
+    .academic_formation,
+    .profissional_experience {
         width: 90%;
     }
 }
