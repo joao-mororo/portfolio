@@ -62,7 +62,7 @@ const Skills = () => {
     const { skillsRef } = useContext(ScrollContext);
 
     return (
-        <section className="skills section" ref={skillsRef}>
+        <section id="skills" className="skills section" ref={skillsRef}>
             <Header>{i18n.t("skills.header")}</Header>
 
             {/* frontend skills */}

@@ -1,29 +1,49 @@
 import React from "react";
 
+/**
+ * Return a page section
+ * @param {string} width - boxed (default) | total
+ * @param {string} height - auto (default) | screen
+ * @param {string} direction - column (default) | row | row-reverse | column-reverse
+ * @param {string} background - any background style setting
+ * @param {string} shadow - box-shadow config
+ * @param {Object} style - style object
+ * @returns {JSX.Element}
+ */
+
 const Section = ({
     children,
-    className,
-    ref,
-    margin,
-    padding = "4rem 5rem",
-    flexDirection = "column",
-    justifyContent = "center",
-    alignItems = "center",
+    background,
+    direction = "column",
+    justifyContent = "flex-start",
+    alignItems = "flex-start",
+    style = {},
+    width = "boxed",
+    height = "auto",
+    shadow,
+    id,
 }) => {
-    const style = {
-        margin,
-        padding,
+    const sectionStyle = {
+        width: "100%",
+        height: height === "screen" ? "100vh" : "auto",
+        padding: "4rem 0",
+        background,
         display: "flex",
-        flexDirection,
+        justifyContent: "center",
+        boxShadow: shadow,
+    };
+
+    const divStyle = {
+        maxWidth: width === "boxed" ? "1140px" : "100%",
+        display: "flex",
+        flexDirection: direction,
         justifyContent,
         alignItems,
-        width: "100%",
-        height: "100vh",
     };
 
     return (
-        <section style={style} className={className} ref={ref}>
-            {children}
+        <section id={id} style={sectionStyle}>
+            <div style={{ ...divStyle, ...style }}>{children}</div>
         </section>
     );
 };

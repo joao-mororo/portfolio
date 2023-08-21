@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
 import Header from "../../components/Header";
+import Section from "../../components/Section";
 import Experience from "./Experience";
 import { i18n } from "../../translate/i18n";
 import { ScrollContext } from "../../contexts/scroll";
@@ -9,7 +10,8 @@ const Experiences = () => {
     const { experienceRef } = useContext(ScrollContext);
 
     return (
-        <section className={styles.section} ref={experienceRef}>
+        <section id="experience" className={styles.section} ref={experienceRef}>
+            {/* <Section direction="row"> */}
             <div className={styles.academic_formation}>
                 <Header>
                     {i18n.t("experience.academic_formation_header")}
@@ -58,6 +60,7 @@ const Experiences = () => {
                     )}
                 />
             </div>
+            {/* </Section> */}
         </section>
     );
 };

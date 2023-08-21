@@ -16,7 +16,7 @@ export default function SayHello() {
     const [subject, setSubject] = useState("");
     const [message, setMessage] = useState("");
     const [sending, setSending] = useState(false);
-    const { sayhelloRef } = useContext(ScrollContext)
+    const { sayhelloRef } = useContext(ScrollContext);
 
     function clear() {
         setName("");
@@ -29,7 +29,10 @@ export default function SayHello() {
         setSending(true);
 
         if (name === "" || email === "" || subject === "" || message === "") {
-            toast.error(i18n.t("say_hello.empty"), Constants.DEFAULT_TOAST_CONFIG);
+            toast.error(
+                i18n.t("say_hello.empty"),
+                Constants.DEFAULT_TOAST_CONFIG
+            );
             setSending(false);
             return;
         }
@@ -41,29 +44,33 @@ export default function SayHello() {
             message: message,
         };
 
-        emailjs.send(
-            Constants.EMAILJS.serviceID,
-            Constants.EMAILJS.templateID,
-            templateParams,
-            Constants.EMAILJS.publicKey
-        ).then(() => {
-            toast.success(
-                i18n.t("say_hello.toast_success"),
-                Constants.DEFAULT_TOAST_CONFIG
-            );
-            clear();
-        },
-            (err) => {
-                toast.error(
-                    i18n.t("say_hello.toast_error"),
-                    Constants.DEFAULT_TOAST_CONFIG
-                );
-            }
-        ).finally(() => setSending(false));
+        emailjs
+            .send(
+                Constants.EMAILJS.serviceID,
+                Constants.EMAILJS.templateID,
+                templateParams,
+                Constants.EMAILJS.publicKey
+            )
+            .then(
+                () => {
+                    toast.success(
+                        i18n.t("say_hello.toast_success"),
+                        Constants.DEFAULT_TOAST_CONFIG
+                    );
+                    clear();
+                },
+                (err) => {
+                    toast.error(
+                        i18n.t("say_hello.toast_error"),
+                        Constants.DEFAULT_TOAST_CONFIG
+                    );
+                }
+            )
+            .finally(() => setSending(false));
     }
 
     return (
-        <section className="sayhello section" ref={sayhelloRef}>
+        <section id="contact" className="sayhello section" ref={sayhelloRef}>
             <Header>{i18n.t("home.say_hello")}</Header>
             <form autoComplete="off">
                 <input
@@ -109,7 +116,9 @@ export default function SayHello() {
                         size="lg"
                     >
                         {!sending ? (
-                            <>{i18n.t("say_hello.send")} <IoSend /></>
+                            <>
+                                {i18n.t("say_hello.send")} <IoSend />
+                            </>
                         ) : (
                             <>{i18n.t("say_hello.sending")}</>
                         )}

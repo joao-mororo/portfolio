@@ -1,14 +1,21 @@
-import React, { useContext } from "react";
+import React from "react";
+import Section from "../../components/Section";
 import DownloadCV from "../../components/DownloadCV";
 import programmingIMG from "../../images/undraw_programming_re_kg9v.svg";
-import { ScrollContext } from "../../contexts/scroll";
 import { i18n } from "../../translate/i18n";
 import styles from "./About.module.css";
 
 const About = () => {
-    const { aboutRef } = useContext(ScrollContext);
     return (
-        <section className={styles.section} ref={aboutRef}>
+        // <section className={styles.section} ref={aboutRef}>
+        <Section
+            direction="row"
+            background="var(--blue)"
+            justifyContent="center"
+            alignItems="center"
+            id="about"
+            shadow="0px 0px 100px 0px var(--blue)"
+        >
             <div className={styles.description}>
                 <h1 className={styles.header}>{i18n.t("about.title")}</h1>
                 <div>
@@ -21,7 +28,8 @@ const About = () => {
             <div className={styles.avatar}>
                 <img src={programmingIMG} alt="avatar" />
             </div>
-        </section>
+        </Section>
+        // </section>
     );
 };
 
