@@ -1,15 +1,16 @@
-import React from 'react'
-import ScrollProvider from '../../contexts/scroll'
-import ThemeProvider from '../../contexts/theme'
+import React from "react";
+import ScrollProvider from "../../contexts/scroll";
+import ThemeProvider from "../../contexts/theme";
+import MediaQueryProvider from "../../contexts/mediaQuery";
 
 const ContextsProvider = ({ children }) => {
     return (
         <ScrollProvider>
             <ThemeProvider>
-                {children}
+                <MediaQueryProvider>{children}</MediaQueryProvider>
             </ThemeProvider>
         </ScrollProvider>
-    )
-}
+    );
+};
 
-export default ContextsProvider
+export default ContextsProvider;

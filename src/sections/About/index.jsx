@@ -1,15 +1,18 @@
-import React from "react";
+import React, { useContext } from "react";
 import Section from "../../components/Section";
 import DownloadCV from "../../components/DownloadCV";
 import programmingIMG from "../../images/sitemap-amico.svg";
+import { MediaQueryContext } from "../../contexts/mediaQuery";
 import { i18n } from "../../translate/i18n";
 import styles from "./About.module.css";
 
 const About = () => {
+    const { isDesktopOrLaptop } = useContext(MediaQueryContext);
+
     return (
         // <section className={styles.section} ref={aboutRef}>
         <Section
-            direction="row"
+            direction={isDesktopOrLaptop ? "row" : "column"}
             background="var(--blue)"
             flex
             justifyContent="center"

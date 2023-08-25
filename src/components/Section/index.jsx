@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 /**
  * Return a page section
@@ -25,10 +25,24 @@ const Section = ({
     shadow,
     id,
 }) => {
+    const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+    useEffect(() => {
+        const handleWindowResize = () => {
+            setWindowWidth(window.innerWidth);
+        };
+
+        window.addEventListener("resize", handleWindowResize);
+
+        return () => {
+            window.removeEventListener("resize", handleWindowResize);
+        };
+    });
+
     const sectionStyle = {
         width: "100%",
         height: height === "screen" ? "100vh" : "auto",
-        padding: "4rem 0",
+        padding: windowWidth > 600 ? "4rem 0" : "4rem 1rem",
         background,
         display: "flex",
         justifyContent: "center",
