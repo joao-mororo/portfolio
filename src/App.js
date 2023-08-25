@@ -11,7 +11,7 @@ import SayHello from "./sections/SayHello";
 import Footer from "./sections/Footer";
 import ToTopButton from "./components/ToTopButton";
 
-import './styles/index.css'
+import './globals.css'
 
 function App() {
   const { scheme } = useContext(ThemeContext)

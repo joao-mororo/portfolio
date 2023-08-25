@@ -2,19 +2,21 @@ import React from "react";
 
 /**
  * Return a page section
+ * @param {string} id - ...an id lol
  * @param {string} width - boxed (default) | total
  * @param {string} height - auto (default) | screen
- * @param {string} direction - column (default) | row | row-reverse | column-reverse
- * @param {string} background - any background style setting
+ * @param {boolean} flex - true | false (default)
+ * @param {string} direction - row (default) | column | row-reverse | column-reverse
+ * @param {string} background - background style config
  * @param {string} shadow - box-shadow config
  * @param {Object} style - style object
  * @returns {JSX.Element}
  */
-
 const Section = ({
     children,
     background,
-    direction = "column",
+    direction = "row",
+    flex = false,
     justifyContent = "flex-start",
     alignItems = "flex-start",
     style = {},
@@ -35,7 +37,7 @@ const Section = ({
 
     const divStyle = {
         maxWidth: width === "boxed" ? "1140px" : "100%",
-        display: "flex",
+        display: flex && "flex",
         flexDirection: direction,
         justifyContent,
         alignItems,

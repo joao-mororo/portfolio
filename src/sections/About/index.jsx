@@ -1,7 +1,7 @@
 import React from "react";
 import Section from "../../components/Section";
 import DownloadCV from "../../components/DownloadCV";
-import programmingIMG from "../../images/undraw_programming_re_kg9v.svg";
+import programmingIMG from "../../images/sitemap-amico.svg";
 import { i18n } from "../../translate/i18n";
 import styles from "./About.module.css";
 
@@ -11,6 +11,7 @@ const About = () => {
         <Section
             direction="row"
             background="var(--blue)"
+            flex
             justifyContent="center"
             alignItems="center"
             id="about"
