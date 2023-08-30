@@ -4,6 +4,7 @@ import projects from "../data/projects";
 import { i18n } from "../translate/i18n";
 import { ScrollContext } from "../contexts/scroll";
 import "../styles/Projects.css";
+import Screenshot from "../components/Screenshot";
 
 const Projects = () => {
     const { projectsRef } = useContext(ScrollContext);
@@ -20,10 +21,14 @@ const Projects = () => {
                         return (
                             <div className="project-card" key={i}>
                                 <figure>
-                                    <img
+                                    {/* <img
                                         className="project-image"
                                         src={project.image}
                                         alt="project-img"
+                                    /> */}
+                                    <Screenshot
+                                        className="project-image"
+                                        url={project.link}
                                     />
                                     <figcaption>
                                         <h1

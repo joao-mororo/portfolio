@@ -1,5 +1,3 @@
-import captureScreenshot from '../functions/captureScreenshot'
-
 const projects = [
     {
         name: "AEG Media - Assessoria de Marketing",
@@ -26,6 +24,10 @@ const projects = [
         name: "Costa & Marinho - Advogados Associados",
         image: require('../images/project-wallpapers/project-costaemarinho.png'),
         link: "https://costaemarinho.aegmedia.com.br/"
+    },
+    {
+        name: "Pernambuco - Proteção Veicular",
+        link: "https://pernambuco.aegmedia.com.br/"
     },
     {
         name: "Cardápio digital para restaurante",
