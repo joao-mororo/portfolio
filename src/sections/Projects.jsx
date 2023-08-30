@@ -7,7 +7,7 @@ import "../styles/Projects.css";
 
 const Projects = () => {
     const { projectsRef } = useContext(ScrollContext);
-    projects.length = window.innerWidth < 600 ? 3 : projects.length;
+    projects.length = window.innerWidth < 600 ? 3 : 6;
 
     return (
         <section id="projects" className="projects section" ref={projectsRef}>

@@ -13,6 +13,21 @@ const projects = [
         link: "https://aegmediamkt.com/protecaoveicular"
     },
     {
+        name: "NewCar - Proteção Veicular",
+        image: require('../images/project-wallpapers/project-newcar.png'),
+        link: "https://newcar.aegmedia.com.br/"
+    },
+    {
+        name: "VIP Nordeste - Proteção Veicular",
+        image: require('../images/project-wallpapers/project-vipnordeste.png'),
+        link: "https://vipnordeste.aegmedia.com.br/"
+    },
+    {
+        name: "Costa & Marinho - Advogados Associados",
+        image: require('../images/project-wallpapers/project-costaemarinho.png'),
+        link: "https://costaemarinho.aegmedia.com.br/"
+    },
+    {
         name: "Cardápio digital para restaurante",
         image: require('../images/project-wallpapers/project-menu.png'),
         link: "https://github.com/joao-mororo/menu"

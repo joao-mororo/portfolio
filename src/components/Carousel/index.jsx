@@ -1,8 +1,8 @@
 import React, { useContext, useState } from "react";
 import Slider from "react-slick";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
-import { useMediaQuery } from "react-responsive";
 import { ThemeContext } from "../../contexts/theme";
+import { MediaQueryContext } from "../../contexts/mediaQuery";
 import styles from "./Carousel.module.css";
 import "./SlickCarousel.css";
 
@@ -15,7 +15,7 @@ import "./SlickCarousel.css";
 
 const Carousel = ({ children }) => {
     const [imageIndex, setImageIndex] = useState(0);
-    const isTabletOrMobile = useMediaQuery({ query: "(max-width: 600px)" });
+    const { isTabletOrMobile } = useContext(MediaQueryContext);
     const { scheme } = useContext(ThemeContext);
 
     const NextArrow = ({ onClick }) => {
