@@ -2,17 +2,14 @@
     --transition-duration: .45s;
 }
 
-.projects {
-    display: flex;
-    flex-direction: column;
+.btn_refresh {
+    position: absolute;
+    background-color: transparent;
     color: var(--blue);
+    font-size: 2rem;
+    border: none;
+    right: 5rem;
 }
-
-/* #projects .header {
-    color: #0d6efd;
-    font-size: 200%;
-    font-family: 'Roboto';
-} */
 
 .projects-grid {
     display: flex;
@@ -98,5 +95,10 @@
 
     .project-card figcaption h1 {
         font-size: 1.5rem !important;
+    }
+
+    .btn_refresh {
+        right: 1.5rem;
+        top: -0.7rem;
     }
 }

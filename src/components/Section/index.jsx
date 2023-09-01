@@ -55,6 +55,7 @@ const Section = ({
         flexDirection: direction,
         justifyContent,
         alignItems,
+        position: "relative",
     };
 
     return (

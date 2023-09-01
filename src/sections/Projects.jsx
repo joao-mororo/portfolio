@@ -1,35 +1,57 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import Header from "../components/Header";
-import projects from "../data/projects";
-import { i18n } from "../translate/i18n";
-import { ScrollContext } from "../contexts/scroll";
-import "../styles/Projects.css";
+import Section from "../components/Section";
 import Screenshot from "../components/Screenshot";
+import shuffle from "../functions/shuffle";
+import projects from "../data/projects";
+import { BiRefresh } from "react-icons/bi";
+import { i18n } from "../translate/i18n";
+import { MediaQueryContext } from "../contexts/mediaQuery";
+import "../styles/Projects.css";
 
 const Projects = () => {
-    const { projectsRef } = useContext(ScrollContext);
-    projects.length = window.innerWidth < 600 ? 3 : 6;
+    const { isDesktopOrLaptop } = useContext(MediaQueryContext);
+    const [filteredProjects, setFilteredProjects] = useState([]);
+
+    const shuffleProjects = () => {
+        let sortedProjects = shuffle(projects);
+        sortedProjects.length = isDesktopOrLaptop ? 6 : 3;
+        setFilteredProjects(sortedProjects);
+        console.log("Refresh projects");
+    };
+    useEffect(() => {
+        shuffleProjects();
+    }, [isDesktopOrLaptop, projects]);
 
     return (
-        <section id="projects" className="projects section" ref={projectsRef}>
+        <Section
+            id="projects"
+            flex
+            direction="column"
+            width="total"
+            alignItems="center"
+        >
+            <button className="btn_refresh" onClick={() => shuffleProjects()}>
+                <BiRefresh />
+            </button>
             <Header>{i18n.t("works.some_works")}</Header>
             <div className="projects-grid">
-                {projects.length === 0 ? (
+                {filteredProjects.length === 0 ? (
                     <h1 style={{ color: "#0d6efd" }}>No projects found</h1>
                 ) : (
-                    projects.map((project, i) => {
+                    filteredProjects.map((project, i) => {
                         return (
                             <div className="project-card" key={i}>
                                 <figure>
-                                    {/* <img
+                                    <img
                                         className="project-image"
                                         src={project.image}
                                         alt="project-img"
-                                    /> */}
-                                    <Screenshot
+                                    />
+                                    {/* <Screenshot
                                         className="project-image"
                                         url={project.link}
-                                    />
+                                    /> */}
                                     <figcaption>
                                         <h1
                                             style={{
@@ -54,7 +76,7 @@ const Projects = () => {
                     })
                 )}
             </div>
-        </section>
+        </Section>
     );
 };
 
